@@ -1,11 +1,3 @@
-DOMAIN-SUFFIX,meta.ai
-DOMAIN-SUFFIX,metademolab.com
-DOMAIN-SUFFIX,genspark.ai
-DOMAIN-SUFFIX,manus.im
-DOMAIN-SUFFIX,skywork.ai
-
-DOMAIN,copilot.microsoft.com
-DOMAIN-SUFFIX,bing.com
 
 DOMAIN-SUFFIX,gemini.google.com
 DOMAIN-SUFFIX,bard.google.com
@@ -18,5 +10,3 @@ DOMAIN-SUFFIX,aistudio-pa.clients6.google.com
 DOMAIN-SUFFIX,googleusercontent.com
 DOMAIN-SUFFIX,android.googleapis.com
 DOMAIN-SUFFIX,makersuite.google.com
-
-DOMAIN-SUFFIX,grok.com
