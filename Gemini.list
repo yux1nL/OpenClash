@@ -7,3 +7,9 @@
   - DOMAIN-SUFFIX,aistudio.google.com
   - DOMAIN-SUFFIX,aistudio-pa.clients6.google.com
   - DOMAIN-SUFFIX,makersuite.google.com
+  - DOMAIN-SUFFIX,ai.google.dev
+  - DOMAIN-SUFFIX,generativeai.google
+  - DOMAIN-SUFFIX,deepmind.google
+  - DOMAIN-SUFFIX,deepmind.com
+  - DOMAIN-KEYWORD,gemini
+  - DOMAIN-KEYWORD,generativelanguage
