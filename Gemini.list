@@ -1,15 +1,16 @@
-  - DOMAIN-SUFFIX,gemini.google.com
-  - DOMAIN-SUFFIX,bard.google.com
-  - DOMAIN-SUFFIX,gemini-pa.googleapis.com
-  - DOMAIN-SUFFIX,robinfrontend-pa.googleapis.com
-  - DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
-  - DOMAIN-SUFFIX,generativelanguage.googleapis.com
-  - DOMAIN-SUFFIX,aistudio.google.com
-  - DOMAIN-SUFFIX,aistudio-pa.clients6.google.com
-  - DOMAIN-SUFFIX,makersuite.google.com
-  - DOMAIN-SUFFIX,ai.google.dev
-  - DOMAIN-SUFFIX,generativeai.google
-  - DOMAIN-SUFFIX,deepmind.google
-  - DOMAIN-SUFFIX,deepmind.com
-  - DOMAIN-KEYWORD,gemini
-  - DOMAIN-KEYWORD,generativelanguage
+# 核心关键字兜底 (全覆盖 gemini 及 generativelanguage 相关所有变体域名与 API)
+DOMAIN-KEYWORD,gemini
+DOMAIN-KEYWORD,generativelanguage  
+# DeepMind 与 AI 开发者基建
+DOMAIN-SUFFIX,deepmind.com
+DOMAIN-SUFFIX,deepmind.google
+DOMAIN-SUFFIX,ai.google.dev
+DOMAIN-SUFFIX,generativeai.google  
+# AI Studio 与遗留平台
+DOMAIN-SUFFIX,aistudio.google.com
+DOMAIN-SUFFIX,aistudio-pa.clients6.google.com
+DOMAIN-SUFFIX,makersuite.google.com  
+# 独立且无规律的内部 PA (Proactive/Personal Assistant) 接口及旧版重定向
+DOMAIN-SUFFIX,bard.google.com
+DOMAIN-SUFFIX,robinfrontend-pa.googleapis.com
+DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
