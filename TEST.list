@@ -66,6 +66,10 @@ DOMAIN-SUFFIX,speedtest.net
 DOMAIN-SUFFIX,speedtest.cn
 DOMAIN-SUFFIX,speedcheck.org
 DOMAIN-SUFFIX,test-ipv6.com
+DOMAIN-SUFFIX,nflxvideo.net
+DOMAIN-SUFFIX,nflxext.com
+DOMAIN-SUFFIX,nflxso.net
+DOMAIN,ichnaea-web.netflix.com
 # =========================================================
 # 5. 進階 IP 欺詐 / 商業風控與威脅情報資料庫 (跨國電商核心風控)
 # =========================================================
@@ -85,7 +89,6 @@ DOMAIN-SUFFIX,bgpview.io
 # =========================================================
 # 6. 雲服務 / 節點商測試與特定排錯
 # =========================================================
-DOMAIN-SUFFIX,vultr.com
 DOMAIN-SUFFIX,workers.dev
 DOMAIN-SUFFIX,b0.upaiyun.com
 DOMAIN-SUFFIX,asn247.net
@@ -96,6 +99,3 @@ DOMAIN-SUFFIX,888005.xyz
 DOMAIN-SUFFIX,1-b.net
 DOMAIN-SUFFIX,ustc.edu.cn
 DOMAIN-SUFFIX,l.google.com
-#=== 備用網飛測試項（保持原樣注釋） ===
-# DOMAIN,ichnaea-web.netflix.com
-# DOMAIN-SUFFIX,1.oca.nflxvideo.net
