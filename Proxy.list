@@ -5,7 +5,6 @@ DOMAIN-SUFFIX,canva.com
 DOMAIN-SUFFIX,fiverr.com
 DOMAIN-SUFFIX,capcut.com
 DOMAIN-SUFFIX,polymarket.com
-
 # =========================================================
 # 2. 🛡️ 网络隐私 / 代理与住宅 IP 供应商后台 (防 CF 质询与连接重置)
 # =========================================================
@@ -14,13 +13,13 @@ DOMAIN-SUFFIX,metacubex.one
 DOMAIN-SUFFIX,hostloc.net
 DOMAIN-SUFFIX,nodeseek.com
 DOMAIN-SUFFIX,bulianglin.com
-# 补充：常用 VPS 与住宅代理/网络工具控制台
 DOMAIN-SUFFIX,vultr.com
+DOMAIN-SUFFIX,racknerd.com
+DOMAIN-SUFFIX,docker.com
 DOMAIN-SUFFIX,iproyal.com
 DOMAIN-SUFFIX,brightdata.com
 DOMAIN-SUFFIX,webshare.io
 DOMAIN-SUFFIX,decodo.com
-
 # =========================================================
 # 3. 🎦 海外华人影视、电影站 (国内常遭屏蔽，且不在常规 Media 库中)
 # =========================================================
@@ -30,7 +29,6 @@ DOMAIN-SUFFIX,wyav.tv
 DOMAIN-SUFFIX,xiaoxintv.cc
 DOMAIN-SUFFIX,meijutt.cc
 DOMAIN-SUFFIX,piaohua.com
-
 # =========================================================
 # 4. 🛠️ 杂项 (海外公共服务、CDN、音视频管理与流媒体刮削)
 # =========================================================
@@ -43,14 +41,12 @@ DOMAIN-SUFFIX,streetfighter.com
 DOMAIN-SUFFIX,capcom.com
 DOMAIN-SUFFIX,piliapp.com
 DOMAIN-SUFFIX,i2p.rocks
-# 媒体服务器及刮削兜底（若未被上层 GlobalMedia 拦截则在此处走代理）
 DOMAIN-SUFFIX,plex.tv
 DOMAIN-SUFFIX,plexapp.com
 DOMAIN-SUFFIX,plexmediaserver.com
 DOMAIN-SUFFIX,themoviedb.org
 DOMAIN-SUFFIX,tmdb.org
 DOMAIN-SUFFIX,thetvdb.com
-
 # =========================================================
 # 5. 🔒 全球顶级海外公共 DNS (精准走代理，打通加密 DNS 隧道)
 # =========================================================
