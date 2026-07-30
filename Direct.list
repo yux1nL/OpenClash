@@ -2,11 +2,11 @@
 # 蜂窝网络 / 运营商 VoWiFi / IPsec / 苹果推送 (最高优先级直连)
 # =========================================================
 # 1. 3GPP 运营商 ePDG 核心网关 (T-Mobile 等 Wi-Fi Calling 依赖)
-DOMAIN-SUFFIX,pub.3gppnetwork.org,DIRECT
-DOMAIN-SUFFIX,epdg.epc.mnc260.mcc310.pub.3gppnetwork.org,DIRECT
+# DOMAIN-SUFFIX,pub.3gppnetwork.org,DIRECT
+# DOMAIN-SUFFIX,epdg.epc.mnc260.mcc310.pub.3gppnetwork.org,DIRECT
 # 2. IPsec 密钥交换与 NAT 穿透端口 (UDP 500 / 4500)
-DST-PORT,500,DIRECT
-DST-PORT,4500,DIRECT
+# DST-PORT,500,DIRECT
+# DST-PORT,4500,DIRECT
 # 3. Apple APNs 消息推送 (防止锁屏休眠后 UDP 保活失效)
 DOMAIN-SUFFIX,push.apple.com,DIRECT
 # =========================================================
