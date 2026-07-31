@@ -40,7 +40,7 @@ IP-CIDR,113.200.251.51/32,DIRECT,no-resolve
 # =========================================================
 # 操作系统底层时间同步 (NTP) - 确保 TLS 握手不报错
 # =========================================================
-DOMAIN-SUFFIX,time.windows.com,DIRECT
+# DOMAIN-SUFFIX,time.windows.com,DIRECT
 # DOMAIN-SUFFIX,time.apple.com,DIRECT
 # DOMAIN-SUFFIX,ntp.aliyun.com,DIRECT
 # DOMAIN-SUFFIX,ntp.tencent.com,DIRECT
