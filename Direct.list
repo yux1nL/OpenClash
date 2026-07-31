@@ -1,15 +1,4 @@
 # =========================================================
-# 蜂窝网络 / 运营商 VoWiFi / IPsec / 苹果推送 (最高优先级直连)
-# =========================================================
-# 1. 3GPP 运营商 ePDG 核心网关 (T-Mobile 等 Wi-Fi Calling 依赖)
-# DOMAIN-SUFFIX,pub.3gppnetwork.org,DIRECT
-# DOMAIN-SUFFIX,epdg.epc.mnc260.mcc310.pub.3gppnetwork.org,DIRECT
-# 2. IPsec 密钥交换与 NAT 穿透端口 (UDP 500 / 4500)
-# DST-PORT,500,DIRECT
-# DST-PORT,4500,DIRECT
-# 3. Apple APNs 消息推送 (防止锁屏休眠后 UDP 保活失效)
-DOMAIN-SUFFIX,push.apple.com,DIRECT
-# =========================================================
 # MyList 核心基础直连 (国内域名不解析时，防止走代理使用)
 # =========================================================
 DOMAIN-SUFFIX,lanzov.com,DIRECT
@@ -17,23 +6,6 @@ DOMAIN-SUFFIX,51zmt.top,DIRECT
 DOMAIN-SUFFIX,gying.net,DIRECT
 DOMAIN,yswmk.sovellzp.com,DIRECT
 DOMAIN,resource-api.esecurityuni.com,DIRECT
-# =========================================================
-# 操作系统底层时间同步 (NTP) - 确保 TLS 握手不报错
-# =========================================================
-DOMAIN-SUFFIX,time.windows.com,DIRECT
-DOMAIN-SUFFIX,time.apple.com,DIRECT
-DOMAIN-SUFFIX,ntp.aliyun.com,DIRECT
-DOMAIN-SUFFIX,ntp.tencent.com,DIRECT
-DOMAIN-SUFFIX,pool.ntp.org,DIRECT
-DOMAIN-SUFFIX,cn.pool.ntp.org,DIRECT
-# =========================================================
-# 终端网络连通性探测 (解决连上网络后转圈圈、提示无网络)
-# =========================================================
-DOMAIN-SUFFIX,msftncsi.com,DIRECT
-DOMAIN,msftconnecttest.com,DIRECT
-DOMAIN,captive.apple.com,DIRECT
-DOMAIN,connect.rom.miui.com,DIRECT
-DOMAIN,connectivitycheck.gstatic.com,DIRECT
 # =========================================================
 # 国内主要公共 DNS 及本地 DNS (精准直连，防止 Fake-IP 污染)
 # =========================================================
@@ -54,3 +26,31 @@ IP-CIDR6,2402:4e00:1::/128,DIRECT,no-resolve
 # 陕西本地运营商 DNS 补充
 IP-CIDR,113.200.251.50/32,DIRECT,no-resolve
 IP-CIDR,113.200.251.51/32,DIRECT,no-resolve
+# =========================================================
+# 蜂窝网络 / 运营商 VoWiFi / IPsec / 苹果推送 (最高优先级直连)
+# =========================================================
+# 1. 3GPP 运营商 ePDG 核心网关 (T-Mobile 等 Wi-Fi Calling 依赖)
+# DOMAIN-SUFFIX,pub.3gppnetwork.org,DIRECT
+# DOMAIN-SUFFIX,epdg.epc.mnc260.mcc310.pub.3gppnetwork.org,DIRECT
+# 2. IPsec 密钥交换与 NAT 穿透端口 (UDP 500 / 4500)
+# DST-PORT,500,DIRECT
+# DST-PORT,4500,DIRECT
+# 3. Apple APNs 消息推送 (防止锁屏休眠后 UDP 保活失效)
+#DOMAIN-SUFFIX,push.apple.com,DIRECT
+# =========================================================
+# 操作系统底层时间同步 (NTP) - 确保 TLS 握手不报错
+# =========================================================
+DOMAIN-SUFFIX,time.windows.com,DIRECT
+# DOMAIN-SUFFIX,time.apple.com,DIRECT
+# DOMAIN-SUFFIX,ntp.aliyun.com,DIRECT
+# DOMAIN-SUFFIX,ntp.tencent.com,DIRECT
+# DOMAIN-SUFFIX,pool.ntp.org,DIRECT
+# DOMAIN-SUFFIX,cn.pool.ntp.org,DIRECT
+# =========================================================
+# 终端网络连通性探测 (解决连上网络后转圈圈、提示无网络)
+# =========================================================
+# DOMAIN-SUFFIX,msftncsi.com,DIRECT
+# DOMAIN,msftconnecttest.com,DIRECT
+# DOMAIN,captive.apple.com,DIRECT
+# DOMAIN,connect.rom.miui.com,DIRECT
+# DOMAIN,connectivitycheck.gstatic.com,DIRECT
