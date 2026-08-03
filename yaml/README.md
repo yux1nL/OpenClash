@@ -1,5 +1,5 @@
 自用定制yaml
-所有yaml文件均为故障转移版
+请注意：所有yaml均不含广告过滤，所有yaml文件均为故障转移版
 Clash-Jc：openclash基础版，无链式代理
 Clash-Ls：openclash链式代理版-socks5静态住宅采用节点组中转
 Clash-Zz：openclash节点组相互中转版
