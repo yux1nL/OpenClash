@@ -4,7 +4,7 @@
 
 proxy-providers:
   美国住宅:
-    url: "https://n1yxl.lyux1n.com:2096/clash/t0aldywtpf840a3s"
+    url: "机场订阅"
     type: http
     interval: 86400
     health-check:
@@ -13,7 +13,7 @@ proxy-providers:
       interval: 180
     proxy: DIRECT
   日本甲古云:
-    url: "https://jgy.lyux1n.com:2096/clash/bjsn7vv4ccj1czsi"
+    url: "机场订阅"
     type: http
     interval: 86400
     health-check:
@@ -22,7 +22,7 @@ proxy-providers:
       interval: 180
     proxy: DIRECT
   日本同行:
-    url: "http://45.143.234.163:2096/sub/1tx41Y9r?format=clash"
+    url: "机场订阅"
     type: http
     interval: 86400
     health-check:
@@ -36,10 +36,10 @@ proxies:
   - {name: 拒绝, type: reject}
   - name: 🇺🇸 静态-链式落地
     type: socks5
-    server: 168.158.199.162
-    port: 12324
-    username: 14a69a191e786
-    password: 5245e5530a
+    server: IP
+    port: 端口号
+    username: 账号
+    password: 密码
     udp: true
     dialer-proxy: 🇯🇵 🇺🇸 链式前置    
 
@@ -116,8 +116,9 @@ dns:
     - '+.zabank.com'
     - '+.za.group'
     - '+.bochk.com'
-  nameserver-policy:
-    '+.lyux1n.com': 'https://dns.alidns.com/dns-query'    
+#  解决自建VPS拉取不正常  
+#  nameserver-policy:
+#    '+.lyux1n.com': 'https://dns.alidns.com/dns-query'    
 
 ipv6: false
 # ========================
@@ -241,8 +242,6 @@ proxy-groups:
 # 规则路由策略 (自顶向下匹配)
 # ========================
 rules:
-  - AND,(SRC-IP-CIDR,192.168.100.21/32),(DOMAIN-KEYWORD,stun),REJECT
-  - AND,(SRC-IP-CIDR,192.168.100.21/32),(NETWORK,udp),(OR,(DST-PORT,3478),(DST-PORT,5349),(DST-PORT,19302)),REJECT
   - RULE-SET,Private / Domain,🇨🇳 国内
   - RULE-SET,Private / IP,🇨🇳 国内,no-resolve
   - RULE-SET,TEST / Domain,🧪 Test
@@ -272,6 +271,7 @@ rules:
   - RULE-SET,China / IP,🇨🇳 国内,no-resolve
   - MATCH,⚓ 其他
 # - RULE-SET,Block / Domain,🚫 Block 
+#  专属需要，取用时直接删除下方被注释掉的
 #  - AND,(SRC-IP,192.168.100.21),(DOMAIN-KEYWORD,stun),REJECT
 #  - AND,(SRC-IP,192.168.100.21),(NETWORK,udp),(OR,(DST-PORT,3478),(DST-PORT,5349),(DST-PORT,19302)),REJECT
 #  - SRC-IP-CIDR,192.168.100.21/32,🛍️ Shopping
