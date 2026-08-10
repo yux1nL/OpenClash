@@ -1,0 +1,26 @@
+# =========================================================
+# T-Mobile (US) Rule-Set Payload
+# Repository Rule Provider for OpenClash / PassWall
+# Strict MCC 310 / MNC 260 Isolation
+# =========================================================
+
+# --- T-Mobile US 核心 API、主站与静态资源 ---
+DOMAIN-SUFFIX,t-mobile.com
+DOMAIN-SUFFIX,tmobile.com
+DOMAIN-SUFFIX,tmocache.com
+DOMAIN-SUFFIX,tmoassets.com
+DOMAIN,t-mobile.idemia.io
+
+# --- T-Mobile US 3GPP 核心网 (IMS / VoWiFi / ePDG) ---
+# 精准匹配美国 T-Mobile (mnc260.mcc310)，一条规则覆盖全部 ePDG/IMS 节点
+DOMAIN-SUFFIX,mnc260.mcc310.pub.3gppnetwork.org
+
+# --- T-Mobile US RCS 富媒体消息网关 ---
+DOMAIN,fp-us-tmobile.rcs.telephony.goog
+
+# --- T-Mobile US 蜂窝网关与核心网段 (防止 DNS 污染/漏网) ---
+IP-CIDR,208.54.0.0/16,no-resolve
+IP-CIDR,66.94.0.0/19,no-resolve
+IP-CIDR,206.29.160.0/19,no-resolve
+IP-CIDR,166.180.0.0/15,no-resolve
+IP-CIDR,166.221.0.0/16,no-resolve
