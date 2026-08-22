@@ -1,24 +1,41 @@
 # =========================================================
 # T-Mobile (US) Rule-Set Payload
-# Repository Rule Provider for OpenClash / PassWall
-# Strict MCC 310 / MNC 260 Isolation
+# Repository Rule Provider for OpenClash / PassWall / Clash Meta
+# 100% Strict T-Mobile Isolation (Zero Non-T-Mobile Pollution)
+# Maintained by: yux1nL
 # =========================================================
-
-# --- T-Mobile US 核心 API、主站与静态资源 ---
+# --- T-Mobile US 核心主站、控制台、资产与官方短链 ---
 DOMAIN-SUFFIX,t-mobile.com
 DOMAIN-SUFFIX,tmobile.com
+DOMAIN-SUFFIX,t-mobilemoney.com
+DOMAIN-SUFFIX,t-mobiletravel.com
+DOMAIN-SUFFIX,t-mobileatwork.com
+DOMAIN-SUFFIX,tmo.co
+DOMAIN-SUFFIX,t-mo.co
 DOMAIN-SUFFIX,tmocache.com
 DOMAIN-SUFFIX,tmoassets.com
+# --- T-Mobile 官方应用 (T-Life / T-Mobile Tuesdays) ---
+DOMAIN-SUFFIX,tlife.com
+DOMAIN-SUFFIX,t-life.com
+DOMAIN-SUFFIX,t-mobiletuesdays.com
+# --- T-Mobile US 专属 Wi-Fi 通话 (VoWiFi / IMS) 鉴权与证书下发 ---
 DOMAIN,t-mobile.idemia.io
-
-# --- T-Mobile US 3GPP 核心网 (IMS / VoWiFi / ePDG) ---
-# 精准匹配美国 T-Mobile (mnc260.mcc310)，一条规则覆盖全部 ePDG/IMS 节点
+DOMAIN,crl.t-mobile.com
+DOMAIN,mascns.t-mobile.com
+DOMAIN,ns.sipgeo.t-mobile.com
+DOMAIN,sg.sipgeo.t-mobile.com
+DOMAIN-SUFFIX,msg.t-mobile.com
+# --- T-Mobile US 专属 3GPP ePDG 核心网 (严格锁定 T-Mobile 号段) ---
+# 主力网号 310-260 (T-Mobile USA)
 DOMAIN-SUFFIX,mnc260.mcc310.pub.3gppnetwork.org
-
-# --- T-Mobile US RCS 富媒体消息网关 ---
+# 扩容与合并网号 310-240 / 310-490 / 311-490 (T-Mobile USA)
+DOMAIN-SUFFIX,mnc240.mcc310.pub.3gppnetwork.org
+DOMAIN-SUFFIX,mnc490.mcc310.pub.3gppnetwork.org
+DOMAIN-SUFFIX,mnc490.mcc311.pub.3gppnetwork.org
+# --- T-Mobile US 专属 RCS 富媒体消息通道 (Google Jibe) ---
 DOMAIN,fp-us-tmobile.rcs.telephony.goog
-
-# --- T-Mobile US 蜂窝网关与核心网段 (防止 DNS 污染/漏网) ---
+DOMAIN-SUFFIX,us-tmobile.jibe.google.com
+# --- T-Mobile US 官方核心 ePDG 网关与 ASN (AS21928 / AS5403) 专属网段 ---
 IP-CIDR,208.54.0.0/16,no-resolve
 IP-CIDR,66.94.0.0/19,no-resolve
 IP-CIDR,206.29.160.0/19,no-resolve
