@@ -6,7 +6,12 @@ DOMAIN-SUFFIX,51zmt.top
 DOMAIN-SUFFIX,gying.net
 DOMAIN,yswmk.sovellzp.com
 DOMAIN,resource-api.esecurityuni.com
+# --- 多邻国 (Duolingo) 全业务直连 ---
+DOMAIN-SUFFIX,duolingo.com
+DOMAIN-SUFFIX,duolingo.cn
+DOMAIN-SUFFIX,duostrings.com
 DOMAIN-KEYWORD,duolingo
+DOMAIN-SUFFIX,recaptcha.net
 # =========================================================
 # 国内主要公共 DNS 及本地 DNS (精准直连，防止 Fake-IP 污染)
 # =========================================================
@@ -27,15 +32,47 @@ IP-CIDR6,2402:4e00:1::/128,DIRECT,no-resolve
 # 陕西本地运营商 DNS 补充
 IP-CIDR,113.200.251.50/32,DIRECT,no-resolve
 IP-CIDR,113.200.251.51/32,DIRECT,no-resolve
-# =========================================================
-# 蜂窝网络 / 运营商 VoWiFi / IPsec / 苹果推送 (最高优先级直连)
-# =========================================================
-# 1. 3GPP 运营商 ePDG 核心网关 (T-Mobile 等 Wi-Fi Calling 依赖)
-# DOMAIN-SUFFIX,pub.3gppnetwork.org
-# DOMAIN-SUFFIX,epdg.epc.mnc260.mcc310.pub.3gppnetwork.org
-# 2. IPsec 密钥交换与 NAT 穿透端口 (UDP 500 / 4500)
-# DST-PORT,500
-# DST-PORT,4500
+# --- 香港 (HK) 运营商 3GPP 核心网 (Wi-Fi Calling / VoWiFi / ePDG) ---
+# 严格锁定香港 MCC 454，覆盖全港所有电信商 (ClubSim/3HK/SoSIM/CSL/CMHK/SmarTone)
+DOMAIN-SUFFIX,mcc454.pub.3gppnetwork.org
+# --- 香港主要运营商官方主站、App 与管理门户 ---
+# HKT / CSL / Club Sim
+DOMAIN-SUFFIX,clubsim.com.hk
+DOMAIN-SUFFIX,hkcsl.com
+DOMAIN-SUFFIX,1010.com.hk
+DOMAIN-SUFFIX,hkt.com
+DOMAIN-SUFFIX,csl.hk
+# 3HK / SoSIM / Supreme
+DOMAIN-SUFFIX,three.com.hk
+DOMAIN-SUFFIX,sosimhk.com
+DOMAIN-SUFFIX,3hongkong.com
+# SmarTone / CMHK (中国移动香港) / CUG (中国联通香港)
+DOMAIN-SUFFIX,smartone.com
+DOMAIN-SUFFIX,hk.chinamobile.com
+DOMAIN-SUFFIX,cmhk.com
+DOMAIN-SUFFIX,cugstore.com
+# --- 香港主要银行与金融机构 (直连防封控) ---
+# 中银香港 (BOCHK)
+DOMAIN-SUFFIX,bochk.com
+DOMAIN-SUFFIX,boc.com.hk
+# 汇丰香港 (HSBC HK)
+DOMAIN-SUFFIX,hsbc.com.hk
+# 建行亚洲 (CCB Asia)
+DOMAIN-SUFFIX,ccbasia.com
+DOMAIN-SUFFIX,ccb.com.hk
+DOMAIN,asia.ccb.com
+# 众安银行 (ZA Bank)
+DOMAIN-SUFFIX,zabank.com
+DOMAIN-SUFFIX,za.group
+
+
+
+
+
+
+
+
+
 # 3. Apple APNs 消息推送 (防止锁屏休眠后 UDP 保活失效)
 # DOMAIN-SUFFIX,push.apple.com
 # =========================================================
