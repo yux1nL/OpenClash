@@ -1,32 +1,34 @@
 # =========================================================
-# Apple 核心 AI 与私密代理 (强制走美区节点，保障 Apple Intelligence)
+# Apple Intelligence & Private Cloud Compute (PCC) 专用规则集
+# 强制走美区原生/AI 落地节点，保障 Apple AI 全功能稳定可用
+# Maintained by: yux1nL
 # =========================================================
-# --- 1. Apple Intelligence & Private Cloud Compute (PCC) 核心 ---
-# 苹果云端 AI 算力集群，Apple Intelligence 离线模型无法处理时必定请求的域名
+
+# --- 1. Apple Intelligence & 云端私密算力集群 (PCC) ---
+# 苹果云端 AI 算力服务 (复杂任务、写作工具、图片生成等云端大模型运算)
 DOMAIN-SUFFIX,pcc.apple.com
 DOMAIN-SUFFIX,intelligence.apple.com
 DOMAIN-SUFFIX,math.apple.com
+DOMAIN-SUFFIX,fbs.apple.com
+
+# --- 2. 苹果 AI 资产、端侧模型权重下载与反馈 ---
+DOMAIN-SUFFIX,model-distribution.apple.com
+DOMAIN-SUFFIX,gdmf.apple.com
+DOMAIN-SUFFIX,feedback-ws.apple.com
+
+# --- 3. Siri 核心与 ChatGPT 深度集成 ---
+DOMAIN-SUFFIX,siri.apple.com
 DOMAIN-SUFFIX,siri.cp.apple.com
-# --- 2. 传统 Siri 与搜索建议 (Spotlight) ---
 DOMAIN-SUFFIX,guzzoni.apple.com
 DOMAIN-SUFFIX,smoot.apple.com
 DOMAIN-SUFFIX,api.smoot.apple.com
-DOMAIN-SUFFIX,siri.apple.com
-DOMAIN-SUFFIX,seed-sequoia.siri.apple.com
-# --- 3. 定位欺骗与网关 (绕过 Apple 区域风控的核心) ---
-# 苹果设备底层判定所在国家/地区的关键定位接口，必须走美国节点
-DOMAIN-SUFFIX,gspe1-ssl.ls.apple.com
-DOMAIN-SUFFIX,gspe35-ssl.ls.apple.com
-DOMAIN-SUFFIX,gateway.icloud.com
-DOMAIN-SUFFIX,apple-dns.net
-# --- 4. iCloud Private Relay (私密接力) ---
-# 强制 Private Relay 的握手流量走代理，以获取海外/美区的出口 IP
-DOMAIN-KEYWORD,apple-relay
-DOMAIN-SUFFIX,apple-relay.cloudflare.com
-DOMAIN-SUFFIX,apple-relay.apple.com
-DOMAIN-SUFFIX,apple-relay.fastly-edge.com
+DOMAIN-SUFFIX,apple.chatgpt.com
+
+# --- 4. Apple Private Cloud 隐私网关与 ODoH 中继节点 ---
+# Apple AI 与私密计算必定经过的云端身份剥离中继
+DOMAIN,gateway.icloud.com
 DOMAIN-SUFFIX,mask.icloud.com
-DOMAIN-SUFFIX,mask.apple-dns.net
-DOMAIN-SUFFIX,mask-api.icloud.com
 DOMAIN-SUFFIX,mask-h2.icloud.com
-DOMAIN-SUFFIX,cp4.cloudflare.com
+DOMAIN-SUFFIX,mask-api.icloud.com
+DOMAIN-SUFFIX,apple-relay.cloudflare.com
+DOMAIN-SUFFIX,apple-relay.fastly-edge.com
