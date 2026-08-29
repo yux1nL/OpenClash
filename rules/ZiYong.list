@@ -1,7 +1,167 @@
 # =========================================================
-# 自用定制分流规则集 
+# 自用定制分流规则集 (ZiYong.list)
 # =========================================================
 
+# ==================== 1. 技术与主机论坛社区 ====================
 # --- NodeSeek 论坛 ---
 DOMAIN-SUFFIX,nodeseek.com
 DOMAIN-KEYWORD,nodeseek
+
+# --- LINUX DO 社区 ---
+DOMAIN-SUFFIX,linux.do
+
+# --- 主机论坛 (Hostloc / LET / LEB) ---
+DOMAIN-SUFFIX,hostloc.com
+DOMAIN-SUFFIX,lowendtalk.com
+DOMAIN-SUFFIX,lowendbox.com
+
+# ==================== 2. NodeSeek 社区热门优化线路与国人/出海 VPS ====================
+# --- 狗妈 (GoMami Networks) & Sharon ---
+DOMAIN-SUFFIX,gomami.io
+DOMAIN-SUFFIX,sharon.io
+
+# --- 搬瓦工 (BandwagonHost 及官方镜像) ---
+DOMAIN-SUFFIX,bandwagonhost.com
+DOMAIN-SUFFIX,bwh88.net
+DOMAIN-SUFFIX,bwh89.net
+DOMAIN-SUFFIX,bwh81.net
+
+# --- DMIT ---
+DOMAIN-SUFFIX,dmit.io
+DOMAIN-SUFFIX,dmit.com
+
+# --- Claw Cloud (新加坡/日本大带宽) ---
+DOMAIN-SUFFIX,claw.cloud
+
+# --- 咸鱼云 (SaltyFish / CheshiR) ---
+DOMAIN-SUFFIX,saltyfish.io
+
+# --- VMISS ---
+DOMAIN-SUFFIX,vmiss.com
+
+# --- 丽萨主机 (LisaHost) ---
+DOMAIN-SUFFIX,lisahost.com
+
+# --- V.PS (XTOM) ---
+DOMAIN-SUFFIX,v.ps
+
+# --- 斯巴达 (Spartan Host) ---
+DOMAIN-SUFFIX,spartanhost.org
+DOMAIN-SUFFIX,spartanhost.net
+
+# --- Akile Cloud ---
+DOMAIN-SUFFIX,akile.io
+
+# --- YXVM ---
+DOMAIN-SUFFIX,yxvm.com
+
+# --- 八哥云 (BageVM) ---
+DOMAIN-SUFFIX,bagevm.com
+
+# --- 微基主机 / 维基主机 (IDC.Wiki) ---
+DOMAIN-SUFFIX,idc.wiki
+DOMAIN-SUFFIX,50kvm.com
+
+# --- Misaka ---
+DOMAIN-SUFFIX,misaka.io
+
+# --- ZgoCloud ---
+DOMAIN-SUFFIX,zgocloud.com
+
+# --- 狗云 (DogYun) ---
+DOMAIN-SUFFIX,dogyun.com
+
+# --- HostDare ---
+DOMAIN-SUFFIX,hostdare.com
+
+# --- 炭云 / 咕咕云 / 快车道 / 库伦 / 白丝云等商家 ---
+DOMAIN-SUFFIX,coalcloud.net
+DOMAIN-SUFFIX,gugucloud.com
+DOMAIN-SUFFIX,kuaichedao.co
+DOMAIN-SUFFIX,olink.cloud
+DOMAIN-SUFFIX,kurun.com
+DOMAIN-SUFFIX,baisiyun.com
+DOMAIN-SUFFIX,wap.ac
+DOMAIN-SUFFIX,hytron.io
+DOMAIN-SUFFIX,alice.ws
+DOMAIN-SUFFIX,zji.net
+DOMAIN-SUFFIX,rfchost.com
+
+# ==================== 3. 欧美高性价比 / 热门大盘鸡 VPS 厂商 ====================
+# --- RackNerd (RN) ---
+DOMAIN-SUFFIX,racknerd.com
+DOMAIN-SUFFIX,racknerdtracker.com
+
+# --- CloudCone ---
+DOMAIN-SUFFIX,cloudcone.com
+DOMAIN-SUFFIX,cloudcone.net
+
+# --- 绿云 (GreenCloudVPS) ---
+DOMAIN-SUFFIX,greencloudvps.com
+
+# --- 德国 Netcup ---
+DOMAIN-SUFFIX,netcup.de
+DOMAIN-SUFFIX,netcup.eu
+DOMAIN-SUFFIX,customercontrolpanel.de
+
+# --- 德国 Hetzner ---
+DOMAIN-SUFFIX,hetzner.com
+DOMAIN-SUFFIX,hetzner.de
+DOMAIN-SUFFIX,hetzner.cloud
+
+# --- 德国 Contabo ---
+DOMAIN-SUFFIX,contabo.com
+
+# --- BuyVM (Frantech) ---
+DOMAIN-SUFFIX,buyvm.net
+DOMAIN-SUFFIX,frantech.ca
+
+# --- HostHatch ---
+DOMAIN-SUFFIX,hosthatch.com
+
+# --- Crunchbits ---
+DOMAIN-SUFFIX,crunchbits.com
+
+# --- WebHorizon ---
+DOMAIN-SUFFIX,webhorizon.in
+
+# --- Servarica ---
+DOMAIN-SUFFIX,servarica.com
+
+# --- Clouvider ---
+DOMAIN-SUFFIX,clouvider.co.uk
+DOMAIN-SUFFIX,clouvider.com
+
+# ==================== 4. 国际一线云厂商 ====================
+# --- Vultr ---
+DOMAIN-SUFFIX,vultr.com
+
+# --- DigitalOcean ---
+DOMAIN-SUFFIX,digitalocean.com
+
+# --- Linode (Akamai) ---
+DOMAIN-SUFFIX,linode.com
+
+# --- 法国 OVHcloud (含 Kimsufi / SoYouStart) ---
+DOMAIN-SUFFIX,ovh.com
+DOMAIN-SUFFIX,ovhcloud.com
+DOMAIN-SUFFIX,ovh.ie
+DOMAIN-SUFFIX,kimsufi.com
+DOMAIN-SUFFIX,soyoustart.com
+
+# --- 法国 Scaleway ---
+DOMAIN-SUFFIX,scaleway.com
+
+# --- 国际三大云管理控制台 (精准匹配控制台，不影响日常服务) ---
+DOMAIN,console.aws.amazon.com
+DOMAIN,signin.aws.amazon.com
+DOMAIN,portal.azure.com
+DOMAIN,console.cloud.google.com
+
+# ==================== 5. 住宅代理 / 商业代理平台 ====================
+DOMAIN-SUFFIX,iproyal.com
+DOMAIN-SUFFIX,smartproxy.com
+DOMAIN-SUFFIX,brightdata.com
+DOMAIN-SUFFIX,webshare.io
+DOMAIN-SUFFIX,proxy-seller.com
+DOMAIN-SUFFIX,ip2world.com
