@@ -6,12 +6,24 @@ DOMAIN-SUFFIX,51zmt.top
 DOMAIN-SUFFIX,gying.net
 DOMAIN,yswmk.sovellzp.com
 DOMAIN,resource-api.esecurityuni.com
+DOMAIN-SUFFIX,right.com.cn
 # --- 多邻国 (Duolingo) 全业务直连 ---
 DOMAIN-SUFFIX,duolingo.com
 DOMAIN-SUFFIX,duolingo.cn
 DOMAIN-SUFFIX,duostrings.com
 DOMAIN-KEYWORD,duolingo
 DOMAIN-SUFFIX,recaptcha.net
+# --- 恩山无线论坛 ---
+DOMAIN-SUFFIX,right.com.cn
+# --- 网易云音乐及网易全业务直连 ---
+DOMAIN-SUFFIX,music.163.com
+DOMAIN-SUFFIX,163.com
+DOMAIN-SUFFIX,126.net
+DOMAIN-SUFFIX,127.net
+DOMAIN-SUFFIX,163yun.com
+DOMAIN-SUFFIX,netease.com
+DOMAIN-KEYWORD,netease
+DOMAIN-KEYWORD,music.163
 # =========================================================
 # 国内主要公共 DNS 及本地 DNS (精准直连，防止 Fake-IP 污染)
 # =========================================================
