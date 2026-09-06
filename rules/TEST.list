@@ -25,7 +25,7 @@ DOMAIN-SUFFIX,ipchaxun.com
 # =========================================================
 # 2. 輕量化 IP API / 命令列及網頁查 IP
 # =========================================================
-DOMAIN-SUFFIX,ipip.net
+#DOMAIN-SUFFIX,ipip.net
 DOMAIN-SUFFIX,ipinfo.io
 DOMAIN-SUFFIX,ip-api.com
 DOMAIN-SUFFIX,ipapi.co
@@ -40,7 +40,7 @@ DOMAIN-SUFFIX,ipw.cn
 DOMAIN-SUFFIX,skk.moe
 DOMAIN-SUFFIX,jsonp-ip.com
 DOMAIN-SUFFIX,ipaddress.me
-DOMAIN-SUFFIX,whois.pconline.com.cn
+#DOMAIN-SUFFIX,whois.pconline.com.cn
 # =========================================================
 # 3. DNS 洩漏、WebRTC 與網路連通性測試
 # =========================================================
