@@ -27,66 +27,121 @@ DOMAIN-SUFFIX,163yun.com
 DOMAIN-SUFFIX,netease.com
 DOMAIN-KEYWORD,netease
 DOMAIN-KEYWORD,music.163
+
 # =========================================================
-# 国内主要公共 DNS 及本地 DNS (精准直连，防止 Fake-IP 污染)
+# 国内主要公共 DNS 及移动/电信专属 (精准直连，保障 DDNS 与外网穿透)
 # =========================================================
 DOMAIN-SUFFIX,dns.alidns.com
 DOMAIN-SUFFIX,doh.pub
-# 公共 IPv4 DNS
-IP-CIDR,119.29.29.29/32,DIRECT,no-resolve
+
+# --- 1. 移动/电信双线 Anycast 顶级公共 IPv4 ---
 IP-CIDR,223.5.5.5/32,DIRECT,no-resolve
 IP-CIDR,223.6.6.6/32,DIRECT,no-resolve
+IP-CIDR,119.29.29.29/32,DIRECT,no-resolve
+IP-CIDR,182.254.116.116/32,DIRECT,no-resolve
 IP-CIDR,180.76.76.76/32,DIRECT,no-resolve
+
+# --- 2. 中国电信 (China Telecom) 专属骨干与陕西本地 IPv4 ---
 IP-CIDR,114.114.114.114/32,DIRECT,no-resolve
 IP-CIDR,114.114.115.115/32,DIRECT,no-resolve
-# 公共 IPv6 DNS (保障外网直连与 DDNS 解析效率)
+IP-CIDR,218.30.19.40/32,DIRECT,no-resolve
+IP-CIDR,61.134.1.4/32,DIRECT,no-resolve
+
+# --- 3. 中国移动 (China Mobile) 专属骨干与陕西本地 IPv4 ---
+IP-CIDR,211.138.180.2/32,DIRECT,no-resolve
+IP-CIDR,211.138.180.3/32,DIRECT,no-resolve
+IP-CIDR,211.137.130.3/32,DIRECT,no-resolve
+IP-CIDR,211.137.130.19/32,DIRECT,no-resolve
+
+# --- 4. 移动/电信双线 IPv6 DNS (必须放行，保障软路由 DDNS 与外网穿透) ---
 IP-CIDR6,2400:3200::1/128,DIRECT,no-resolve
 IP-CIDR6,2400:3200:baba::1/128,DIRECT,no-resolve
 IP-CIDR6,2402:4e00::/128,DIRECT,no-resolve
 IP-CIDR6,2402:4e00:1::/128,DIRECT,no-resolve
-# 陕西本地运营商 DNS 补充
-IP-CIDR,113.200.251.50/32,DIRECT,no-resolve
-IP-CIDR,113.200.251.51/32,DIRECT,no-resolve
-# --- 香港 (HK) 运营商 3GPP 核心网 (Wi-Fi Calling / VoWiFi / ePDG) ---
+IP-CIDR6,240e:4c:4008::1/128,DIRECT,no-resolve
+IP-CIDR6,2409:8088::a/128,DIRECT,no-resolve
+
+# =========================================================
+# 香港 (HK) 运营商 3GPP 核心网 (Wi-Fi Calling / VoWiFi / ePDG)
+# =========================================================
 # 严格锁定香港 MCC 454，覆盖全港所有电信商 (ClubSim/3HK/SoSIM/CSL/CMHK/SmarTone)
 DOMAIN-SUFFIX,mcc454.pub.3gppnetwork.org
-# --- 香港主要运营商官方主站、App 与管理门户 ---
-# HKT / CSL / Club Sim
+
+# =========================================================
+# 香港主要移动运营商官方主站、App、充值与管理门户
+# =========================================================
+# HKT / CSL / 1010 / Club Sim
 DOMAIN-SUFFIX,clubsim.com.hk
 DOMAIN-SUFFIX,hkcsl.com
 DOMAIN-SUFFIX,1010.com.hk
 DOMAIN-SUFFIX,hkt.com
 DOMAIN-SUFFIX,csl.hk
-# 3HK / SoSIM / Supreme
+DOMAIN-SUFFIX,theclub.com.hk
+# 和记 3HK / SoSIM / Supreme
 DOMAIN-SUFFIX,three.com.hk
 DOMAIN-SUFFIX,sosimhk.com
 DOMAIN-SUFFIX,3hongkong.com
-# SmarTone / CMHK (中国移动香港) / CUG (中国联通香港)
+DOMAIN-SUFFIX,supreme.vip
+# 数码通 SmarTone
 DOMAIN-SUFFIX,smartone.com
+DOMAIN-SUFFIX,smartoneplus.com
+# 中国移动香港 (CMHK) / 润迅通信
 DOMAIN-SUFFIX,hk.chinamobile.com
 DOMAIN-SUFFIX,cmhk.com
 DOMAIN-SUFFIX,cugstore.com
-# --- 香港主要银行与金融机构 (直连防封控) ---
+
+# =========================================================
+# 香港主要银行与金融机构 (直连放行，防异地登录/反洗钱风控)
+# =========================================================
 # 中银香港 (BOCHK)
 DOMAIN-SUFFIX,bochk.com
 DOMAIN-SUFFIX,boc.com.hk
 # 汇丰香港 (HSBC HK)
 DOMAIN-SUFFIX,hsbc.com.hk
+DOMAIN-SUFFIX,hsbc.com
+# 恒生银行 (Hang Seng Bank)
+DOMAIN-SUFFIX,hangseng.com
+DOMAIN-SUFFIX,hangseng.com.hk
+# 渣打香港 (Standard Chartered HK)
+DOMAIN-SUFFIX,sc.com
+DOMAIN-SUFFIX,standardchartered.com.hk
 # 建行亚洲 (CCB Asia)
 DOMAIN-SUFFIX,ccbasia.com
 DOMAIN-SUFFIX,ccb.com.hk
 DOMAIN,asia.ccb.com
+# 工银亚洲 (ICBC Asia)
+DOMAIN-SUFFIX,icbcasia.com
+# 招商永隆银行 (CMB Wing Lung)
+DOMAIN-SUFFIX,cmbwinglung.com
+# 东亚银行 (BEA)
+DOMAIN-SUFFIX,hkbea.com
+DOMAIN-SUFFIX,hkbea.com.hk
+# 花旗香港 (Citibank HK)
+DOMAIN-SUFFIX,citibank.com.hk
+DOMAIN-SUFFIX,citi.com.hk
+# 大新银行 (Dah Sing Bank)
+DOMAIN-SUFFIX,dahsing.com
+# 创兴银行 (Chong Hing Bank)
+DOMAIN-SUFFIX,chbank.com
+# 南洋商业银行 (NCB)
+DOMAIN-SUFFIX,ncb.com.hk
+
+# --- 香港主流虚拟银行 (Virtual Banks) ---
 # 众安银行 (ZA Bank)
 DOMAIN-SUFFIX,zabank.com
 DOMAIN-SUFFIX,za.group
-
-
-
-
-
-
-
-
+# 渣打旗下天星 / Mox Bank
+DOMAIN-SUFFIX,mox.com
+# 中银联同怡和旗下 理慧银行 (Livi Bank)
+DOMAIN-SUFFIX,livibank.com
+# 匯立银行 (WeLab Bank)
+DOMAIN-SUFFIX,welab.bank
+# 蚂蚁银行香港 (Ant Bank HK)
+DOMAIN-SUFFIX,antbank.hk
+# 平安壹账通银行 (PAOB)
+DOMAIN-SUFFIX,paob.com.hk
+# 富融银行 (Fusion Bank)
+DOMAIN-SUFFIX,fusionbank.com
 
 # 3. Apple APNs 消息推送 (防止锁屏休眠后 UDP 保活失效)
 # DOMAIN-SUFFIX,push.apple.com
