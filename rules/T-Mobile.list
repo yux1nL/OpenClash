@@ -2,7 +2,6 @@
 # T-Mobile (US) Rule-Set Payload
 # Repository Rule Provider for OpenClash / PassWall / Clash Meta
 # 100% Strict T-Mobile Isolation (Zero Non-T-Mobile Pollution)
-# Maintained by: yux1nL
 # =========================================================
 # --- T-Mobile US 核心主站、控制台、资产与官方短链 ---
 DOMAIN-SUFFIX,t-mobile.com
