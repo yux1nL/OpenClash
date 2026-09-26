@@ -35,36 +35,44 @@ DOMAIN-SUFFIX,dns.alidns.com
 DOMAIN-SUFFIX,doh.pub
 
 # --- 1. 移动/电信双线 Anycast 顶级公共 IPv4 ---
-IP-CIDR,223.5.5.5/32,DIRECT,no-resolve
-IP-CIDR,223.6.6.6/32,DIRECT,no-resolve
-IP-CIDR,119.29.29.29/32,DIRECT,no-resolve
-IP-CIDR,182.254.116.116/32,DIRECT,no-resolve
-IP-CIDR,180.76.76.76/32,DIRECT,no-resolve
+IP-CIDR,223.5.5.5/32,no-resolve
+IP-CIDR,223.6.6.6/32,no-resolve
+IP-CIDR,119.29.29.29/32,no-resolve
+IP-CIDR,182.254.116.116/32,no-resolve
+IP-CIDR,180.76.76.76/32,no-resolve
 
-# --- 2. 中国电信 (China Telecom) 专属骨干与陕西本地 IPv4 ---
-IP-CIDR,114.114.114.114/32,DIRECT,no-resolve
-IP-CIDR,114.114.115.115/32,DIRECT,no-resolve
-IP-CIDR,218.30.19.40/32,DIRECT,no-resolve
-IP-CIDR,61.134.1.4/32,DIRECT,no-resolve
+# --- 2. 中国电信 (China Telecom) 专属骨干与本地 IPv4 ---
+IP-CIDR,114.114.114.114/32,no-resolve
+IP-CIDR,114.114.115.115/32,no-resolve
+IP-CIDR,218.30.19.40/32,no-resolve
+IP-CIDR,61.134.1.4/32,no-resolve
 
-# --- 3. 中国移动 (China Mobile) 专属骨干与陕西本地 IPv4 ---
-IP-CIDR,211.138.180.2/32,DIRECT,no-resolve
-IP-CIDR,211.138.180.3/32,DIRECT,no-resolve
-IP-CIDR,211.137.130.3/32,DIRECT,no-resolve
-IP-CIDR,211.137.130.19/32,DIRECT,no-resolve
+# --- 3. 中国移动 (China Mobile) 专属骨干与本地 IPv4 ---
+IP-CIDR,211.138.180.2/32,no-resolve
+IP-CIDR,211.138.180.3/32,no-resolve
+IP-CIDR,211.137.130.3/32,no-resolve
+IP-CIDR,211.137.130.19/32,no-resolve
 
-# --- 4. 移动/电信双线 IPv6 DNS (必须放行，保障软路由 DDNS 与外网穿透) ---
-IP-CIDR6,2400:3200::1/128,DIRECT,no-resolve
-IP-CIDR6,2400:3200:baba::1/128,DIRECT,no-resolve
-IP-CIDR6,2402:4e00::/128,DIRECT,no-resolve
-IP-CIDR6,2402:4e00:1::/128,DIRECT,no-resolve
-IP-CIDR6,240e:4c:4008::1/128,DIRECT,no-resolve
-IP-CIDR6,2409:8088::a/128,DIRECT,no-resolve
+# --- 4. 移动/电信双线 IPv6 DNS ---
+IP-CIDR6,2400:3200::1/128,no-resolve
+IP-CIDR6,2400:3200:baba::1/128,no-resolve
+IP-CIDR6,2402:4e00::/128,no-resolve
+IP-CIDR6,2402:4e00:1::/128,no-resolve
+IP-CIDR6,240e:4c:4008::1/128,no-resolve
+IP-CIDR6,2409:8088::a/128,no-resolve
+
+# =========================================================
+# 香港 (HK) 金融清算底层基础设施 (转数快 FPS / HKICL 核心基建)
+# =========================================================
+DOMAIN-SUFFIX,hkicl.com.hk
+DOMAIN-SUFFIX,fps.hk
+DOMAIN-SUFFIX,chinapay.com
+DOMAIN-SUFFIX,unionpay.com
+DOMAIN-SUFFIX,95516.com
 
 # =========================================================
 # 香港 (HK) 运营商 3GPP 核心网 (Wi-Fi Calling / VoWiFi / ePDG)
 # =========================================================
-# 严格锁定香港 MCC 454，覆盖全港所有电信商 (ClubSim/3HK/SoSIM/CSL/CMHK/SmarTone)
 DOMAIN-SUFFIX,mcc454.pub.3gppnetwork.org
 
 # =========================================================
@@ -77,6 +85,7 @@ DOMAIN-SUFFIX,1010.com.hk
 DOMAIN-SUFFIX,hkt.com
 DOMAIN-SUFFIX,csl.hk
 DOMAIN-SUFFIX,theclub.com.hk
+DOMAIN-SUFFIX,pccw.com
 # 和记 3HK / SoSIM / Supreme
 DOMAIN-SUFFIX,three.com.hk
 DOMAIN-SUFFIX,sosimhk.com
@@ -91,11 +100,29 @@ DOMAIN-SUFFIX,cmhk.com
 DOMAIN-SUFFIX,cugstore.com
 
 # =========================================================
-# 香港主要银行与金融机构 (直连放行，防异地登录/反洗钱风控)
+# 中银香港 (BOCHK) 全生态业务与核心自持机房 IP 骨干 (重点强化)
 # =========================================================
-# 中银香港 (BOCHK)
 DOMAIN-SUFFIX,bochk.com
 DOMAIN-SUFFIX,boc.com.hk
+DOMAIN-SUFFIX,bankofchina.com.hk
+DOMAIN-SUFFIX,bochk.com.cn
+DOMAIN-SUFFIX,boc.cn
+DOMAIN-SUFFIX,bankofchina.com
+DOMAIN-SUFFIX,bocgroup.com
+DOMAIN-SUFFIX,bocichina.com
+DOMAIN-SUFFIX,bocservices.com.cn
+DOMAIN-SUFFIX,bocim.com
+DOMAIN-SUFFIX,bocaviation.com
+DOMAIN-KEYWORD,bochk
+
+# --- 中银香港官方 ASN (AS24396) 核心自持 IP 段 (解决 fake-ip-filter 后脱靶问题) ---
+IP-CIDR,202.127.168.0/21,no-resolve
+IP-CIDR,203.78.3.0/24,no-resolve
+IP-CIDR,202.82.164.0/22,no-resolve
+
+# =========================================================
+# 香港主要银行与金融机构 (直连放行，防异地登录/反洗钱风控)
+# =========================================================
 # 汇丰香港 (HSBC HK)
 DOMAIN-SUFFIX,hsbc.com.hk
 DOMAIN-SUFFIX,hsbc.com
@@ -113,6 +140,9 @@ DOMAIN,asia.ccb.com
 DOMAIN-SUFFIX,icbcasia.com
 # 招商永隆银行 (CMB Wing Lung)
 DOMAIN-SUFFIX,cmbwinglung.com
+DOMAIN-SUFFIX,winglungbank.com
+# 中信银行国际 (CNCBI)
+DOMAIN-SUFFIX,cncbinternational.com
 # 东亚银行 (BEA)
 DOMAIN-SUFFIX,hkbea.com
 DOMAIN-SUFFIX,hkbea.com.hk
@@ -125,14 +155,17 @@ DOMAIN-SUFFIX,dahsing.com
 DOMAIN-SUFFIX,chbank.com
 # 南洋商业银行 (NCB)
 DOMAIN-SUFFIX,ncb.com.hk
+DOMAIN-SUFFIX,ncbchina.cn
+# 上海商业银行 (Shacom)
+DOMAIN-SUFFIX,shacombank.com.hk
 
-# --- 香港主流虚拟银行 (Virtual Banks) ---
+# --- 香港全部 8 家主流虚拟银行 (Virtual Banks) ---
 # 众安银行 (ZA Bank)
 DOMAIN-SUFFIX,zabank.com
 DOMAIN-SUFFIX,za.group
-# 渣打旗下天星 / Mox Bank
+# Mox Bank (渣打旗下)
 DOMAIN-SUFFIX,mox.com
-# 中银联同怡和旗下 理慧银行 (Livi Bank)
+# 理慧银行 (Livi Bank)
 DOMAIN-SUFFIX,livibank.com
 # 匯立银行 (WeLab Bank)
 DOMAIN-SUFFIX,welab.bank
@@ -142,3 +175,5 @@ DOMAIN-SUFFIX,antbank.hk
 DOMAIN-SUFFIX,paob.com.hk
 # 富融银行 (Fusion Bank)
 DOMAIN-SUFFIX,fusionbank.com
+# 天星银行 (Airstar Bank)
+DOMAIN-SUFFIX,airstarbank.com
