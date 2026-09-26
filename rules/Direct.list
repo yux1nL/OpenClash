@@ -142,23 +142,3 @@ DOMAIN-SUFFIX,antbank.hk
 DOMAIN-SUFFIX,paob.com.hk
 # 富融银行 (Fusion Bank)
 DOMAIN-SUFFIX,fusionbank.com
-
-# 3. Apple APNs 消息推送 (防止锁屏休眠后 UDP 保活失效)
-# DOMAIN-SUFFIX,push.apple.com
-# =========================================================
-# 操作系统底层时间同步 (NTP) - 确保 TLS 握手不报错
-# =========================================================
-# DOMAIN-SUFFIX,time.windows.com
-# DOMAIN-SUFFIX,time.apple.com
-# DOMAIN-SUFFIX,ntp.aliyun.com
-# DOMAIN-SUFFIX,ntp.tencent.com
-# DOMAIN-SUFFIX,pool.ntp.org
-# DOMAIN-SUFFIX,cn.pool.ntp.org
-# =========================================================
-# 终端网络连通性探测 (解决连上网络后转圈圈、提示无网络)
-# =========================================================
-# DOMAIN-SUFFIX,msftncsi.com
-# DOMAIN,msftconnecttest.com
-# DOMAIN,captive.apple.com
-# DOMAIN,connect.rom.miui.com
-# DOMAIN,connectivitycheck.gstatic.com
