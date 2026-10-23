@@ -1,33 +1,49 @@
 # ==============================================================================
-# 🛍️ 美国海淘、跨境电商与核心风控依赖规则集 (US Shopping & Dependencies)
+# 🛍️ 美国海淘、跨境电商与核心风控依赖规则集 (US Shopping & Dependencies - 终极版)
 # 适用内核: Clash / OpenClash / Mihomo (Clash Meta)
 # ==============================================================================
+
 # ------------------------------------------------------------------------------
-# 🛡️ 1. 核心风控、反欺诈与设备指纹 (防砍单核心：若与主站 IP 不一致极易触发订单拦截)
+# 🛡️ 1. 核心风控、反欺诈、设备指纹与行为探针 (防砍单核心：与主站 IP 必须严格一致)
 # ------------------------------------------------------------------------------
-# Signifyd & Riskified & Forter & Kount (电商四大风控系统)
+# 电商五大反欺诈与拒付担保系统 (Signifyd / Riskified / Forter / Kount / Accertify)
 DOMAIN-SUFFIX,signifyd.com
 DOMAIN-SUFFIX,riskified.com
 DOMAIN-SUFFIX,forter.com
 DOMAIN-SUFFIX,kount.net
-# Sift & PerimeterX (HUMAN Security) & DataDome
+DOMAIN-SUFFIX,kount.com
+DOMAIN-SUFFIX,accertify.com
+DOMAIN-SUFFIX,inauth.com
+# Sift & PerimeterX (HUMAN Security) & DataDome & Kasada (顶级电商防爬与机器人检测)
 DOMAIN-SUFFIX,siftscience.com
 DOMAIN-SUFFIX,sift.com
 DOMAIN-SUFFIX,perimeterx.net
 DOMAIN-SUFFIX,px-cdn.net
 DOMAIN-SUFFIX,px-cloud.net
+DOMAIN-SUFFIX,px-client.net
 DOMAIN-SUFFIX,humansecurity.com
 DOMAIN-SUFFIX,datadome.co
 DOMAIN-SUFFIX,kasada.io
-# ThreatMetrix (LexisNexis) & Iesnare (Iovation / TransUnion) 设备指纹库
+# ThreatMetrix (LexisNexis) & Iesnare (Iovation / TransUnion) & Ekata 身份与设备指纹库
 DOMAIN-SUFFIX,threatmetrix.com
 DOMAIN-SUFFIX,online-metrix.net
 DOMAIN-SUFFIX,iesnare.com
 DOMAIN-SUFFIX,iovation.com
+DOMAIN-SUFFIX,ekata.com
+DOMAIN-SUFFIX,emailage.com
+DOMAIN-SUFFIX,clearsale.com
+DOMAIN-SUFFIX,clearsale.com.br
+DOMAIN-SUFFIX,socure.com
+DOMAIN-SUFFIX,sardine.ai
+DOMAIN-SUFFIX,seon.io
+DOMAIN-SUFFIX,deduce.com
 DOMAIN-SUFFIX,fraud.net
 DOMAIN-SUFFIX,minfraud.com
 DOMAIN-SUFFIX,maxmind.com
-# Arkose Labs (FunCaptcha) & 浏览器指纹库 & 行为探针
+# 验证码、WAF 盾与浏览器硬件指纹库 (Cloudflare / Google / hCaptcha / Arkose / FingerprintJS)
+DOMAIN-SUFFIX,challenges.cloudflare.com
+DOMAIN-SUFFIX,recaptcha.net
+DOMAIN-SUFFIX,hcaptcha.com
 DOMAIN-SUFFIX,arkoselabs.com
 DOMAIN-SUFFIX,arkose.com
 DOMAIN-SUFFIX,funcaptcha.com
@@ -38,15 +54,26 @@ DOMAIN-SUFFIX,castle.io
 DOMAIN-SUFFIX,incapsula.com
 DOMAIN-SUFFIX,imperva.com
 DOMAIN-SUFFIX,shapesecurity.com
-DOMAIN-SUFFIX,challenges.cloudflare.com
-# 营销与行为分析服务 (部分结账流强依赖)
-DOMAIN-SUFFIX,bluecore.com
-DOMAIN-SUFFIX,yotpo.com
-DOMAIN-SUFFIX,bazaarvoice.com
-DOMAIN-SUFFIX,cquotient.com
+# 结账页会话录制、监控与顾客身份认证中心 (CIAM)
+DOMAIN-SUFFIX,quantummetric.com
+DOMAIN-SUFFIX,fullstory.com
+DOMAIN-SUFFIX,glassboxdigital.io
+DOMAIN-SUFFIX,contentsquare.net
+DOMAIN-SUFFIX,noibu.com
+DOMAIN-SUFFIX,btttag.com
+DOMAIN-SUFFIX,gigya.com
+DOMAIN-SUFFIX,janrain.com
+
 # ------------------------------------------------------------------------------
-# 💳 2. 支付网关、快捷结账与结算依赖 (Payment Gateways & Checkout)
+# 💳 2. 支付网关、3DS 2.0 银行鉴权、先买后付 (BNPL) 与百货金融卡网关
 # ------------------------------------------------------------------------------
+# 信用卡 3DS 2.0 隐形鉴权网关 (Visa CardinalCommerce / Mastercard 结账防砍单核心)
+DOMAIN-SUFFIX,cardinalcommerce.com
+DOMAIN-SUFFIX,arcot.com
+DOMAIN-SUFFIX,modirum.com
+DOMAIN-SUFFIX,3dsecure.io
+DOMAIN-SUFFIX,wibmo.com
+DOMAIN-SUFFIX,entersekt.com
 # PayPal & Braintree
 DOMAIN-SUFFIX,paypal.com
 DOMAIN-SUFFIX,paypalobjects.com
@@ -65,48 +92,147 @@ DOMAIN-SUFFIX,shop.app
 DOMAIN-SUFFIX,shopifypay.com
 DOMAIN-SUFFIX,shopifycdn.com
 DOMAIN-SUFFIX,shopifyapps.com
-# 先买后付 (BNPL) 与各大收单网关
+# 先买后付 (BNPL) 与北美主流收单清算网关
 DOMAIN-SUFFIX,adyen.com
 DOMAIN-SUFFIX,adyenpayments.com
 DOMAIN-SUFFIX,klarna.com
 DOMAIN-SUFFIX,klarnacdn.net
 DOMAIN-SUFFIX,affirm.com
+DOMAIN-SUFFIX,affirm-cdn.com
 DOMAIN-SUFFIX,afterpay.com
 DOMAIN-SUFFIX,clearpay.com
 DOMAIN-SUFFIX,cybersource.com
 DOMAIN-SUFFIX,authorize.net
+DOMAIN-SUFFIX,worldpay.com
+DOMAIN-SUFFIX,vantiv.com
+DOMAIN-SUFFIX,fiserv.com
+DOMAIN-SUFFIX,firstdata.com
+DOMAIN-SUFFIX,cardconnect.com
+DOMAIN-SUFFIX,elavon.com
+DOMAIN-SUFFIX,convergepay.com
+DOMAIN-SUFFIX,checkout.com
+DOMAIN-SUFFIX,spreedly.com
 DOMAIN-SUFFIX,bolt.com
 DOMAIN-SUFFIX,fast.co
 DOMAIN-SUFFIX,sezzle.com
 DOMAIN-SUFFIX,zip.co
-# 跨境订单与清关结算 (Borderfree / Global-e)
+# 百货联名卡与分期网关 (Synchrony / Bread Financial / Comenity)
+DOMAIN-SUFFIX,synchrony.com
+DOMAIN-SUFFIX,syf.com
+DOMAIN-SUFFIX,mysynchrony.com
+DOMAIN-SUFFIX,breadfinancial.com
+DOMAIN-SUFFIX,breadpayments.com
+DOMAIN-SUFFIX,comenity.net
+# 跨境订单与清关结算 (Borderfree / Global-e / ESW)
 DOMAIN-SUFFIX,borderfree.com
 DOMAIN-SUFFIX,global-e.com
 DOMAIN-SUFFIX,pitneybowes.com
+DOMAIN-SUFFIX,eshopworld.com
+
 # ------------------------------------------------------------------------------
-# 📍 3. 地址校验、邮政查询与物流接口 (Address Validation & Shipping APIs)
+# 💰 3. 海淘返利网、导购社区与联盟营销追踪跳转网关 (防丢返利 & 防跳转 IP 突变)
 # ------------------------------------------------------------------------------
+# 主流海淘返利网与北美导购社区
+DOMAIN-SUFFIX,rakuten.com
+DOMAIN-SUFFIX,ebates.com
+DOMAIN-SUFFIX,topcashback.com
+DOMAIN-SUFFIX,befrugal.com
+DOMAIN-SUFFIX,retailmenot.com
+DOMAIN-SUFFIX,rmn.com
+DOMAIN-SUFFIX,capitaloneshopping.com
+DOMAIN-SUFFIX,joinhoney.com
+DOMAIN-SUFFIX,slickdeals.net
+DOMAIN-SUFFIX,dealmoon.com
+# 联盟营销追踪跳转网关 (Rakuten / CJ / Impact / ShareASale / Partnerize)
+DOMAIN-SUFFIX,linksynergy.com
+DOMAIN-SUFFIX,cj.com
+DOMAIN-SUFFIX,dpbolvw.net
+DOMAIN-SUFFIX,tkqlhce.com
+DOMAIN-SUFFIX,anrdoezrs.net
+DOMAIN-SUFFIX,jdoqocy.com
+DOMAIN-SUFFIX,kqzyfj.com
+DOMAIN-SUFFIX,impact.com
+DOMAIN-SUFFIX,ojrq.net
+DOMAIN-SUFFIX,7eer.net
+DOMAIN-SUFFIX,evyy.net
+DOMAIN-SUFFIX,pxf.io
+DOMAIN-SUFFIX,shareasale.com
+DOMAIN-SUFFIX,avantlink.com
+DOMAIN-SUFFIX,pepperjam.com
+DOMAIN-SUFFIX,partnerize.com
+DOMAIN-SUFFIX,prf.hn
+DOMAIN-SUFFIX,skimresources.com
+DOMAIN-SUFFIX,viglink.com
+
+# ------------------------------------------------------------------------------
+# 📍 4. 地址校验、实时运费计算、物流官网与售后退换追踪 (Address & Logistics)
+# ------------------------------------------------------------------------------
+# 邮政编码与美私/转运地址标准化核验 API
 DOMAIN-SUFFIX,smartystreets.com
 DOMAIN-SUFFIX,smarty.com
 DOMAIN-SUFFIX,loqate.com
 DOMAIN-SUFFIX,postcodeanywhere.co.uk
+DOMAIN-SUFFIX,experian.com
+DOMAIN-SUFFIX,melissadata.com
+DOMAIN-SUFFIX,melissa.com
+DOMAIN-SUFFIX,qas.com
+DOMAIN-SUFFIX,lob.com
+# 聚合打单、包裹保价、百货订单追踪与退换货门户
 DOMAIN-SUFFIX,goshippo.com
 DOMAIN-SUFFIX,easypost.com
-DOMAIN-SUFFIX,lob.com
-DOMAIN-SUFFIX,qas.com
+DOMAIN-SUFFIX,narvar.com
+DOMAIN-SUFFIX,route.com
+DOMAIN-SUFFIX,loopreturns.com
+DOMAIN-SUFFIX,happyreturns.com
+# 美国四大物流与末端派送官网 (结账实时运费接口 & 轨迹查询)
+DOMAIN-SUFFIX,usps.com
+DOMAIN-SUFFIX,ups.com
+DOMAIN-SUFFIX,fedex.com
+DOMAIN-SUFFIX,dhl.com
+DOMAIN-SUFFIX,ontrac.com
+DOMAIN-SUFFIX,lasership.com
+
 # ------------------------------------------------------------------------------
-# ☁️ 4. 电商底层 SaaS 与多媒体渲染 CDN (SaaS & Media CDN)
+# ☁️ 5. 电商底层 SaaS、站内搜索推荐引擎与商品交互组件 (SaaS & Search & Reviews)
 # ------------------------------------------------------------------------------
-# Salesforce Commerce Cloud (Demandware) & Adobe Dynamic Media (百货商品图及交互依赖)
+# Salesforce Commerce Cloud (Demandware) & Adobe Scene7 & BigCommerce & VTEX
 DOMAIN-SUFFIX,demandware.net
 DOMAIN-SUFFIX,demandware.store
 DOMAIN-SUFFIX,scene7.com
 DOMAIN-SUFFIX,bigcommerce.com
 DOMAIN-SUFFIX,mybigcommerce.com
+DOMAIN-SUFFIX,commercetools.com
+DOMAIN-SUFFIX,vtex.com
+DOMAIN-SUFFIX,squarespace.com
+DOMAIN-SUFFIX,sqspcdn.com
+# 商城站内搜索与个性化商品推荐接口 (防搜索无结果或列表空白)
+DOMAIN-SUFFIX,algolia.net
+DOMAIN-SUFFIX,algolianet.com
+DOMAIN-SUFFIX,algolia.io
+DOMAIN-SUFFIX,constructor.io
+DOMAIN-SUFFIX,bloomreach.com
+DOMAIN-SUFFIX,brcdn.com
+DOMAIN-SUFFIX,searchspring.io
+DOMAIN-SUFFIX,klevu.com
+DOMAIN-SUFFIX,nosto.com
+DOMAIN-SUFFIX,monetate.net
+DOMAIN-SUFFIX,dynamicyield.com
+DOMAIN-SUFFIX,cquotient.com
+# 商品评价、积分与营销弹窗组件 (部分结账流强依赖)
+DOMAIN-SUFFIX,bazaarvoice.com
+DOMAIN-SUFFIX,yotpo.com
+DOMAIN-SUFFIX,powerreviews.com
+DOMAIN-SUFFIX,turnto.com
+DOMAIN-SUFFIX,okendo.io
+DOMAIN-SUFFIX,stamped.io
+DOMAIN-SUFFIX,bluecore.com
+DOMAIN-SUFFIX,klaviyo.com
+DOMAIN-SUFFIX,attentivemobile.com
+
 # ------------------------------------------------------------------------------
-# 🛍️ 5. 美国主流百货、品牌站与海淘商城
+# 🛍️ 6. 全美主流百货、奢品、美妆、潮牌、户外与数码海淘商城
 # ------------------------------------------------------------------------------
-# 综合百货 & 电商平台
+# 综合百货、仓储会员店与折扣百货
 DOMAIN-SUFFIX,amazon.com
 DOMAIN-SUFFIX,amazonpay.com
 DOMAIN-SUFFIX,media-amazon.com
@@ -121,8 +247,8 @@ DOMAIN-SUFFIX,walmart.com
 DOMAIN-SUFFIX,walmartimages.com
 DOMAIN-SUFFIX,target.com
 DOMAIN-SUFFIX,targetimg1.com
-DOMAIN-SUFFIX,bestbuy.com
-DOMAIN-SUFFIX,bbystatic.com
+DOMAIN-SUFFIX,costco.com
+DOMAIN-SUFFIX,samsclub.com
 DOMAIN-SUFFIX,macys.com
 DOMAIN-SUFFIX,macysassets.com
 DOMAIN-SUFFIX,bloomingdales.com
@@ -136,59 +262,182 @@ DOMAIN-SUFFIX,neimanmarcus.com
 DOMAIN-SUFFIX,bergdorfgoodman.com
 DOMAIN-SUFFIX,kohls.com
 DOMAIN-SUFFIX,kohlsimg.com
-DOMAIN-SUFFIX,costco.com
-DOMAIN-SUFFIX,samsclub.com
-# 运动潮流 & 球鞋服饰
+DOMAIN-SUFFIX,jcpenney.com
+DOMAIN-SUFFIX,dillards.com
+DOMAIN-SUFFIX,belk.com
+DOMAIN-SUFFIX,tjmaxx.com
+DOMAIN-SUFFIX,marshalls.com
+DOMAIN-SUFFIX,sierra.com
+DOMAIN-SUFFIX,gilt.com
+DOMAIN-SUFFIX,ruelala.com
+DOMAIN-SUFFIX,qvc.com
+DOMAIN-SUFFIX,hsn.com
+# 奢侈品电商与名表折扣商城
+DOMAIN-SUFFIX,ssense.com
+DOMAIN-SUFFIX,farfetch.com
+DOMAIN-SUFFIX,endclothing.com
+DOMAIN-SUFFIX,shopbop.com
+DOMAIN-SUFFIX,revolve.com
+DOMAIN-SUFFIX,fwrd.com
+DOMAIN-SUFFIX,mytheresa.com
+DOMAIN-SUFFIX,net-a-porter.com
+DOMAIN-SUFFIX,mrporter.com
+DOMAIN-SUFFIX,cettire.com
+DOMAIN-SUFFIX,italist.com
+DOMAIN-SUFFIX,24s.com
+DOMAIN-SUFFIX,jomashop.com
+DOMAIN-SUFFIX,ashford.com
+# 时尚美妆、护肤集合店与雅诗兰黛/欧莱雅系美国官网
+DOMAIN-SUFFIX,sephora.com
+DOMAIN-SUFFIX,sephora.net
+DOMAIN-SUFFIX,ulta.com
+DOMAIN-SUFFIX,dermstore.com
+DOMAIN-SUFFIX,skinstore.com
+DOMAIN-SUFFIX,beautylish.com
+DOMAIN-SUFFIX,spacenk.com
+DOMAIN-SUFFIX,cultbeauty.com
+DOMAIN-SUFFIX,lookfantastic.com
+DOMAIN-SUFFIX,esteelauder.com
+DOMAIN-SUFFIX,clinique.com
+DOMAIN-SUFFIX,origins.com
+DOMAIN-SUFFIX,lamer.com
+DOMAIN-SUFFIX,cremedelamer.com
+DOMAIN-SUFFIX,bobbibrowncosmetics.com
+DOMAIN-SUFFIX,maccosmetics.com
+DOMAIN-SUFFIX,tomfordbeauty.com
+DOMAIN-SUFFIX,JoMalone.com
+DOMAIN-SUFFIX,aveneusa.com
+DOMAIN-SUFFIX,skinceuticals.com
+DOMAIN-SUFFIX,lancome-usa.com
+DOMAIN-SUFFIX,kiehls.com
+DOMAIN-SUFFIX,yslbeautyus.com
+DOMAIN-SUFFIX,armanibeauty-usa.com
+DOMAIN-SUFFIX,shiseido.com
+DOMAIN-SUFFIX,cledepeau-beaute.com
+DOMAIN-SUFFIX,charlottetilbury.com
+DOMAIN-SUFFIX,patmcgrath.com
+DOMAIN-SUFFIX,fentybeauty.com
+DOMAIN-SUFFIX,glossier.com
+DOMAIN-SUFFIX,bathandbodyworks.com
+DOMAIN-SUFFIX,victoriassecret.com
+# 运动潮流、球鞋交易与休闲服饰专柜
 DOMAIN-SUFFIX,nike.com
 DOMAIN-SUFFIX,nikecdn.com
 DOMAIN-SUFFIX,snkrs.com
 DOMAIN-SUFFIX,adidas.com
 DOMAIN-SUFFIX,adidas.net
 DOMAIN-SUFFIX,newbalance.com
+DOMAIN-SUFFIX,joesnewbalanceoutlet.com
 DOMAIN-SUFFIX,lululemon.com
+DOMAIN-SUFFIX,underarmour.com
+DOMAIN-SUFFIX,puma.com
+DOMAIN-SUFFIX,asics.com
+DOMAIN-SUFFIX,hoka.com
+DOMAIN-SUFFIX,on-running.com
+DOMAIN-SUFFIX,salomon.com
+DOMAIN-SUFFIX,saucony.com
+DOMAIN-SUFFIX,brooksrunning.com
+DOMAIN-SUFFIX,vans.com
+DOMAIN-SUFFIX,converse.com
+DOMAIN-SUFFIX,timberland.com
+DOMAIN-SUFFIX,ugg.com
+DOMAIN-SUFFIX,crocs.com
+DOMAIN-SUFFIX,birkenstock.com
 DOMAIN-SUFFIX,footlocker.com
 DOMAIN-SUFFIX,champssports.com
 DOMAIN-SUFFIX,finishline.com
 DOMAIN-SUFFIX,jdsports.com
+DOMAIN-SUFFIX,hibbett.com
+DOMAIN-SUFFIX,dickssportinggoods.com
+DOMAIN-SUFFIX,zappos.com
+DOMAIN-SUFFIX,6pm.com
 DOMAIN-SUFFIX,stockx.com
 DOMAIN-SUFFIX,goat.com
 DOMAIN-SUFFIX,flightclub.com
+DOMAIN-SUFFIX,stadiumgoods.com
 DOMAIN-SUFFIX,kith.com
-DOMAIN-SUFFIX,ssense.com
-DOMAIN-SUFFIX,farfetch.com
-DOMAIN-SUFFIX,endclothing.com
-# 时尚美妆 & 品牌专柜
-DOMAIN-SUFFIX,sephora.com
-DOMAIN-SUFFIX,sephora.net
-DOMAIN-SUFFIX,ulta.com
+DOMAIN-SUFFIX,supreme.com
+DOMAIN-SUFFIX,stussy.com
 DOMAIN-SUFFIX,ralphlauren.com
 DOMAIN-SUFFIX,coach.com
 DOMAIN-SUFFIX,coachoutlet.com
 DOMAIN-SUFFIX,toryburch.com
 DOMAIN-SUFFIX,michaelkors.com
 DOMAIN-SUFFIX,katespade.com
+DOMAIN-SUFFIX,katespadeoutlet.com
 DOMAIN-SUFFIX,jcrew.com
 DOMAIN-SUFFIX,factory.jcrew.com
+DOMAIN-SUFFIX,madewell.com
 DOMAIN-SUFFIX,gap.com
+DOMAIN-SUFFIX,gapfactory.com
 DOMAIN-SUFFIX,oldnavy.com
 DOMAIN-SUFFIX,bananarepublic.com
 DOMAIN-SUFFIX,abercrombie.com
 DOMAIN-SUFFIX,hollisterco.com
 DOMAIN-SUFFIX,ae.com
 DOMAIN-SUFFIX,levi.com
-# 户外骑行 & 电子数码 & 保健母婴
+DOMAIN-SUFFIX,tommy.com
+DOMAIN-SUFFIX,calvinklein.us
+DOMAIN-SUFFIX,calvinklein.com
+DOMAIN-SUFFIX,lacoste.com
+DOMAIN-SUFFIX,brooksbrothers.com
+DOMAIN-SUFFIX,theory.com
+DOMAIN-SUFFIX,everlane.com
+DOMAIN-SUFFIX,reformation.com
+DOMAIN-SUFFIX,urbanoutfitters.com
+DOMAIN-SUFFIX,anthropologie.com
+DOMAIN-SUFFIX,freepeople.com
+DOMAIN-SUFFIX,oakley.com
+DOMAIN-SUFFIX,ray-ban.com
+DOMAIN-SUFFIX,sunglasshut.com
+# 户外露营、电子数码、家居厨具与保健母婴
 DOMAIN-SUFFIX,rei.com
 DOMAIN-SUFFIX,backcountry.com
+DOMAIN-SUFFIX,steepandcheap.com
 DOMAIN-SUFFIX,moosejaw.com
+DOMAIN-SUFFIX,campsaver.com
+DOMAIN-SUFFIX,evo.com
 DOMAIN-SUFFIX,patagonia.com
 DOMAIN-SUFFIX,arcteryx.com
 DOMAIN-SUFFIX,thenorthface.com
 DOMAIN-SUFFIX,columbia.com
-DOMAIN-SUFFIX,apple.com
+DOMAIN-SUFFIX,marmot.com
+DOMAIN-SUFFIX,mountainhardwear.com
+DOMAIN-SUFFIX,llbean.com
+DOMAIN-SUFFIX,eddiebauer.com
+DOMAIN-SUFFIX,bestbuy.com
+DOMAIN-SUFFIX,bbystatic.com
 DOMAIN-SUFFIX,bhphotovideo.com
+DOMAIN-SUFFIX,adorama.com
 DOMAIN-SUFFIX,newegg.com
+DOMAIN-SUFFIX,neweggimages.com
 DOMAIN-SUFFIX,microcenter.com
+DOMAIN-SUFFIX,crutchfield.com
+DOMAIN-SUFFIX,gamestop.com
+DOMAIN-SUFFIX,dyson.com
+DOMAIN-SUFFIX,garmin.com
+DOMAIN-SUFFIX,bose.com
+DOMAIN-SUFFIX,sonos.com
+DOMAIN-SUFFIX,gopro.com
+DOMAIN-SUFFIX,wayfair.com
+DOMAIN-SUFFIX,williams-sonoma.com
+DOMAIN-SUFFIX,potterybarn.com
+DOMAIN-SUFFIX,westelm.com
+DOMAIN-SUFFIX,crateandbarrel.com
+DOMAIN-SUFFIX,surlatable.com
+DOMAIN-SUFFIX,zwilling.com
+DOMAIN-SUFFIX,lecreuset.com
 DOMAIN-SUFFIX,iherb.com
 DOMAIN-SUFFIX,gnc.com
 DOMAIN-SUFFIX,vitacost.com
+DOMAIN-SUFFIX,swansonvitamins.com
+DOMAIN-SUFFIX,puritan.com
+DOMAIN-SUFFIX,walgreens.com
+DOMAIN-SUFFIX,cvs.com
+DOMAIN-SUFFIX,chewy.com
 DOMAIN-SUFFIX,carters.com
+DOMAIN-SUFFIX,albeebaby.com
+DOMAIN-SUFFIX,shopdisney.com
+DOMAIN-SUFFIX,disneystore.com
+DOMAIN-SUFFIX,lego.com
+DOMAIN-SUFFIX,jellycat.com
