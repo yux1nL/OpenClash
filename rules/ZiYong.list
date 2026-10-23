@@ -3,9 +3,9 @@
 # =========================================================
 
 # ==================== 1. 技术与主机论坛社区 ====================
-# --- NodeSeek 论坛 ---
+# --- NodeSeek 论坛及官方图床 ---
 DOMAIN-SUFFIX,nodeseek.com
-DOMAIN-KEYWORD,nodeseek
+DOMAIN-SUFFIX,nodeimage.com
 
 # --- LINUX DO 社区 ---
 DOMAIN-SUFFIX,linux.do
