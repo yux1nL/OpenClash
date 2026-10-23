@@ -17,13 +17,8 @@ DOMAIN-SUFFIX,tmoassets.com
 DOMAIN-SUFFIX,tlife.com
 DOMAIN-SUFFIX,t-life.com
 DOMAIN-SUFFIX,t-mobiletuesdays.com
-# --- T-Mobile US 专属 Wi-Fi 通话 (VoWiFi / IMS) 鉴权与证书下发 ---
+# --- T-Mobile US 专属 Wi-Fi 通话 (VoWiFi / IMS) 外部证书鉴权 ---
 DOMAIN,t-mobile.idemia.io
-DOMAIN,crl.t-mobile.com
-DOMAIN,mascns.t-mobile.com
-DOMAIN,ns.sipgeo.t-mobile.com
-DOMAIN,sg.sipgeo.t-mobile.com
-DOMAIN-SUFFIX,msg.t-mobile.com
 # --- T-Mobile US 专属 3GPP ePDG 核心网 (严格锁定 T-Mobile 号段) ---
 # 主力网号 310-260 (T-Mobile USA)
 DOMAIN-SUFFIX,mnc260.mcc310.pub.3gppnetwork.org
@@ -36,7 +31,7 @@ DOMAIN,fp-us-tmobile.rcs.telephony.goog
 DOMAIN-SUFFIX,us-tmobile.jibe.google.com
 # --- T-Mobile US 官方核心 ePDG 网关与 ASN (AS21928 / AS5403) 专属网段 ---
 IP-CIDR,208.54.0.0/16,no-resolve
-IP-CIDR,66.94.0.0/19,no-resolve
+IP-CIDR,66.94.0.0/16,no-resolve
 IP-CIDR,206.29.160.0/19,no-resolve
 IP-CIDR,166.180.0.0/15,no-resolve
 IP-CIDR,166.221.0.0/16,no-resolve
