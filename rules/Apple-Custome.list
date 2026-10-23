@@ -11,7 +11,8 @@ DOMAIN-SUFFIX,intelligence.apple.com
 DOMAIN-SUFFIX,math.apple.com
 DOMAIN-SUFFIX,fbs.apple.com
 
-# --- 2. 苹果 AI 资产、端侧模型权重下载与反馈 ---
+# --- 2. 苹果 AI 资产、地理围栏资格校验、端侧模型权重下载与反馈 ---
+DOMAIN-SUFFIX,gspe1-ssl.ls.apple.com
 DOMAIN-SUFFIX,model-distribution.apple.com
 DOMAIN-SUFFIX,gdmf.apple.com
 DOMAIN-SUFFIX,feedback-ws.apple.com
@@ -21,10 +22,9 @@ DOMAIN-SUFFIX,siri.apple.com
 DOMAIN-SUFFIX,siri.cp.apple.com
 DOMAIN-SUFFIX,guzzoni.apple.com
 DOMAIN-SUFFIX,smoot.apple.com
-DOMAIN-SUFFIX,api.smoot.apple.com
 DOMAIN-SUFFIX,apple.chatgpt.com
 
-# --- 4. Apple Private Cloud 隐私网关与 ODoH 中继节点 ---
+# --- 4. Apple Private Cloud 隐私网关与 ODoH / OHTTP 中继节点 ---
 # Apple AI 与私密计算必定经过的云端身份剥离中继
 DOMAIN,gateway.icloud.com
 DOMAIN-SUFFIX,mask.icloud.com
@@ -32,3 +32,5 @@ DOMAIN-SUFFIX,mask-h2.icloud.com
 DOMAIN-SUFFIX,mask-api.icloud.com
 DOMAIN-SUFFIX,apple-relay.cloudflare.com
 DOMAIN-SUFFIX,apple-relay.fastly-edge.com
+DOMAIN-SUFFIX,ohttp-relay.fastly-edge.com
+DOMAIN-SUFFIX,cp4.cloudflare.com
