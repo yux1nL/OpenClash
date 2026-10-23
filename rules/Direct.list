@@ -8,16 +8,14 @@ DOMAIN-SUFFIX,lyux1n.com
 DOMAIN-SUFFIX,88800.org
 DOMAIN,yswmk.sovellzp.com
 DOMAIN,resource-api.esecurityuni.com
-DOMAIN-SUFFIX,right.com.cn
 # --- 多邻国 (Duolingo) 全业务直连 ---
 DOMAIN-SUFFIX,duolingo.com
 DOMAIN-SUFFIX,duolingo.cn
 DOMAIN-SUFFIX,duostrings.com
 DOMAIN-KEYWORD,duolingo
-DOMAIN-SUFFIX,recaptcha.net
 # --- 恩山无线论坛 ---
 DOMAIN-SUFFIX,right.com.cn
-#
+# --- 国内测速网直连 ---
 DOMAIN-SUFFIX,speedtest.cn
 # --- 网易云音乐及网易全业务直连 ---
 DOMAIN-SUFFIX,music.163.com
@@ -70,11 +68,6 @@ DOMAIN-SUFFIX,fps.hk
 DOMAIN-SUFFIX,chinapay.com
 DOMAIN-SUFFIX,unionpay.com
 DOMAIN-SUFFIX,95516.com
-
-# =========================================================
-# 香港 (HK) 运营商 3GPP 核心网 (Wi-Fi Calling / VoWiFi / ePDG)
-# =========================================================
-DOMAIN-SUFFIX,mcc454.pub.3gppnetwork.org
 
 # =========================================================
 # 香港主要移动运营商官方主站、App、充值与管理门户
