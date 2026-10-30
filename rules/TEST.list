@@ -61,11 +61,11 @@ DOMAIN-SUFFIX,ipv6-test.com
 # 5. 【國內實用測試網頁】
 # 說明: PConline、IPIP.NET 及中科大保持註釋禁用；其餘常用的國內查 IP 與測速放開
 # =========================================================
-#DOMAIN-SUFFIX,whois.pconline.com.cn
-#DOMAIN-SUFFIX,ipip.net
-#DOMAIN-SUFFIX,ustc.edu.cn
-#DOMAIN,test.ustc.edu.cn
-#DOMAIN,speedtest.ustc.edu.cn
+DOMAIN-SUFFIX,whois.pconline.com.cn
+DOMAIN-SUFFIX,ipip.net
+DOMAIN-SUFFIX,ustc.edu.cn
+DOMAIN,test.ustc.edu.cn
+DOMAIN,speedtest.ustc.edu.cn
 #DOMAIN-SUFFIX,speedtest.cn
 DOMAIN-SUFFIX,ip138.com
 DOMAIN-SUFFIX,ip111.cn
