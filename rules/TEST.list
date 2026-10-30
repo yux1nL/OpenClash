@@ -1,83 +1,172 @@
 # =========================================================
 # 1. 常用網頁 IP 查詢、偽裝度、純淨度與指紋檢測 (手動打開看效果)
 # =========================================================
-DOMAIN-SUFFIX,ipcheck.ing
-DOMAIN-SUFFIX,ipcheck.im
-DOMAIN-SUFFIX,whoer.net
-DOMAIN-SUFFIX,whoer.com
-DOMAIN-SUFFIX,browserleaks.com
-DOMAIN-SUFFIX,browserscan.net
-DOMAIN-SUFFIX,iphey.com
-DOMAIN-SUFFIX,ping0.cc
-DOMAIN-SUFFIX,scamalytics.com
-DOMAIN-SUFFIX,pixelscan.net
-DOMAIN-SUFFIX,ipqualityscore.com
-DOMAIN-SUFFIX,ipqs.com
-DOMAIN-SUFFIX,ip-score.com
-DOMAIN-SUFFIX,ip2location.com
-DOMAIN-SUFFIX,ip2proxy.com
-DOMAIN-SUFFIX,whatismyipaddress.com
-DOMAIN-SUFFIX,whatismyip.com
-DOMAIN-SUFFIX,ipaddress.com
-DOMAIN-SUFFIX,iplocation.net
-DOMAIN-SUFFIX,myip.com
-DOMAIN-SUFFIX,ipx.ac
-DOMAIN-SUFFIX,deviceinfo.me
-DOMAIN-SUFFIX,amiunique.org
-DOMAIN-SUFFIX,iplark.com
+DOMAIN-SUFFIX,ipcheck.ing                 # [原有] IPCheck 综合IP检测与伪装度
+DOMAIN-SUFFIX,ipcheck.im                  # [原有] IPCheck 备用域名
+DOMAIN-SUFFIX,whoer.net                   # [原有] Whoer 经典伪装度检测
+DOMAIN-SUFFIX,whoer.com                   # [原有] Whoer 官网备用域
+DOMAIN-SUFFIX,browserleaks.com            # [原有] BrowserLeaks 权威浏览器指纹与IP泄露检测
+DOMAIN-SUFFIX,browserscan.net             # [原有] BrowserScan 指纹与环境检测
+DOMAIN-SUFFIX,iphey.com                   # [原有] IP Hey 伪装度与纯净度评分
+DOMAIN-SUFFIX,ping0.cc                    # [原有] Ping0 常用IP体检与伪装度
+DOMAIN-SUFFIX,scamalytics.com             # [原有] Scamalytics 全球反欺诈与黑名单评分
+DOMAIN-SUFFIX,pixelscan.net               # [原有] Pixelscan 机器人与指纹风控检测
+DOMAIN-SUFFIX,ipqualityscore.com          # [原有] IPQualityScore (IPQS) 商业反欺诈风控分
+DOMAIN-SUFFIX,ipqs.com                    # [原有] IPQS 官方短域名
+DOMAIN-SUFFIX,ip-score.com                # [原有] IP-Score 风险度检测
+DOMAIN-SUFFIX,ip2location.com             # [原有] IP2Location 经典IP数据库与代理识别
+DOMAIN-SUFFIX,ip2proxy.com                # [原有] IP2Proxy 官方代理检测库
+DOMAIN-SUFFIX,whatismyipaddress.com       # [原有] WhatIsMyIPAddress 老牌IP查询
+DOMAIN-SUFFIX,whatismyip.com              # [原有] WhatIsMyIP 老牌IP查询
+DOMAIN-SUFFIX,ipaddress.com               # [原有] IPAddress 基础IP与归属地
+DOMAIN-SUFFIX,iplocation.net              # [原有] IPLocation 多源IP归属地查询
+DOMAIN-SUFFIX,myip.com                    # [原有] MyIP 综合IP信息
+DOMAIN-SUFFIX,ipx.ac                      # [原有] IPX 伪装度与原生IP测试
+DOMAIN-SUFFIX,deviceinfo.me               # [原有] DeviceInfo 设备指纹全套检测
+DOMAIN-SUFFIX,amiunique.org               # [原有] AmIUnique 浏览器唯一指纹研究检测
+DOMAIN-SUFFIX,iplark.com                  # [原有] IPLark 纯净度与C段画像检测
+DOMAIN-SUFFIX,ippure.com                  # [新增] IPPure 社区热门综合纯净度与欺诈评分
+DOMAIN-SUFFIX,ipsuper.com                 # [新增] IPSuper 多数据库交叉纯净度验证
+DOMAIN-SUFFIX,check.place                 # [新增] IP.Check.Place 综合IP体检与解锁检测
+DOMAIN-SUFFIX,ipfighter.com               # [新增] IPFighter 跨境多平台画像与纯净度
+DOMAIN-SUFFIX,todetect.com                # [新增] ToDetect 浏览器指纹环境与IP检测
+DOMAIN-SUFFIX,todetect.net                # [新增] ToDetect 备用域
+DOMAIN-SUFFIX,ip2location.io              # [新增] IP2Location 官方新一代API与查询站
+DOMAIN-SUFFIX,ipdata.co                   # [新增] IPData 商业级IP风控与威胁情报
+DOMAIN-SUFFIX,ipregistry.co               # [新增] IPRegistry 代理识别与纯净度
+DOMAIN-SUFFIX,ipgeolocation.io            # [新增] IPGeolocation 商业地理定位与威胁检测
+DOMAIN-SUFFIX,ipstack.com                 # [新增] IPStack 经典商业IP定位
+DOMAIN-SUFFIX,db-ip.com                   # [新增] DB-IP 全球IP分析与机房/家宽标识
+DOMAIN-SUFFIX,myip.ms                     # [新增] MyIP.ms 主机IP档案与蜘蛛黑名单
+DOMAIN-SUFFIX,proxycheck.io               # [新增] ProxyCheck 权威开放代理/VPN与风险库
+DOMAIN-SUFFIX,abstractapi.com             # [新增] AbstractAPI 商业级IP归属与代理检测
+DOMAIN-SUFFIX,apivoid.com                 # [新增] APIVoid 全网IP黑名单信誉扫描
+DOMAIN-SUFFIX,spur.us                     # [新增] Spur 顶级商业代理/住宅IP风控数据库
+DOMAIN-SUFFIX,fanny.im                    # [新增] Fanny 综合IP检测
+DOMAIN-SUFFIX,ipscore.io                  # [新增] IPScore 纯净度检测
+DOMAIN-SUFFIX,incolumitas.com             # [新增] Incolumitas 深度爬虫/反检测指纹测试
+DOMAIN,abrahamjuliot.github.io            # [新增] CreepJS 官方主站（业界最强浏览器指纹探针）
+DOMAIN,coveryourtracks.eff.org            # [新增] EFF 电子前哨基金会浏览器防追踪测试
+DOMAIN-SUFFIX,showmyip.com                # [新增] ShowMyIP 快速IP环境与代理查看
+DOMAIN-SUFFIX,checkmyip.com               # [新增] CheckMyIP IP真实性与属性
+DOMAIN-SUFFIX,trustmyip.com               # [新增] TrustMyIP 纯净度检测
+DOMAIN-SUFFIX,ip-tracker.org              # [新增] IP-Tracker 全球追踪与风险检测
+DOMAIN-SUFFIX,myipscan.net                # [新增] MyIPScan IP隐私与泄露扫描
+# --- [以下为海淘防砍单隔离项 (置于底部)] ---
+#DOMAIN-SUFFIX,maxmind.com                 # [新增] [⚠️海淘冲突隔离] MaxMind minFraud欺诈风控与GeoIP（海淘防砍单核心，避免抢占海淘组）
+
 # =========================================================
 # 2. 極簡網頁快速查 IP (瀏覽器一打開就是大字 IP)
 # =========================================================
-DOMAIN-SUFFIX,ip.sb
-DOMAIN-SUFFIX,ipinfo.io
-DOMAIN-SUFFIX,ip-api.com
-DOMAIN-SUFFIX,ipapi.co
-DOMAIN-SUFFIX,ipapi.is
-DOMAIN-SUFFIX,icanhazip.com
-DOMAIN-SUFFIX,ifconfig.me
-DOMAIN-SUFFIX,skk.moe
+DOMAIN-SUFFIX,ip.sb                       # [原有] IP.SB 经典大字极简查IP
+DOMAIN-SUFFIX,ipinfo.io                   # [原有] IPinfo 权威开发者大字IP/API
+DOMAIN-SUFFIX,ip-api.com                  # [原有] IP-API 高频轻量IP接口与大字
+DOMAIN-SUFFIX,ipapi.co                    # [原有] IPAPI 快速IP定位
+DOMAIN-SUFFIX,ipapi.is                    # [原有] IPAPI.is 极简IP与代理详情
+DOMAIN-SUFFIX,icanhazip.com               # [原有] icanhazip 纯文本大字查IP
+DOMAIN-SUFFIX,ifconfig.me                 # [原有] ifconfig.me 经典极简IP查询
+DOMAIN-SUFFIX,skk.moe                     # [原有] Sukka 极简IP与网络测试
+DOMAIN-SUFFIX,ifconfig.co                 # [新增] ifconfig.co 极简大字与命令行查IP
+DOMAIN-SUFFIX,ifconfig.io                 # [新增] ifconfig.io 极简快速IP展示
+DOMAIN-SUFFIX,ipify.org                   # [新增] ipify 全球最大轻量公共IP API与网页
+DOMAIN-SUFFIX,ident.me                    # [新增] ident.me 极简纯文本/网页双栈IP
+DOMAIN-SUFFIX,ip.me                       # [新增] ip.me 极简大字IP展示
+DOMAIN-SUFFIX,ip.gs                       # [新增] ip.gs 极简大字查IP
+DOMAIN-SUFFIX,myip.la                     # [新增] myip.la 极简大字查IP
+DOMAIN-SUFFIX,seeip.org                   # [新增] seeip 极简快速IP返回
+DOMAIN-SUFFIX,wtfismyip.com               # [新增] wtfismyip 老牌纯文本/大字查IP
+DOMAIN-SUFFIX,trackip.net                 # [新增] trackip 极简IP查询
+DOMAIN-SUFFIX,ip.guide                    # [新增] ip.guide 极简大字与ASN路线
+DOMAIN-SUFFIX,ipwho.is                    # [新增] ipwho.is 极简快速IP定位
+DOMAIN-SUFFIX,ipecho.net                  # [新增] ipecho 经典纯文本IP回显
+DOMAIN-SUFFIX,curlmyip.org                # [新增] curlmyip 极简命令行/网页大字
+DOMAIN-SUFFIX,showip.net                  # [新增] showip 极简大字显示
+DOMAIN-SUFFIX,jsonip.com                  # [新增] jsonip 极简IP返回
+DOMAIN-SUFFIX,ip4.me                      # [新增] ip4.me 极简IPv4专用大字
+DOMAIN-SUFFIX,ip6.me                      # [新增] ip6.me 极简IPv6专用大字
+DOMAIN-SUFFIX,ip4only.me                  # [新增] ip4only.me 仅IPv4连通大字
+DOMAIN-SUFFIX,ip6only.me                  # [新增] ip6only.me 仅IPv6连通大字
+DOMAIN-SUFFIX,wgetip.com                  # [新增] wgetip 极简快速回显
+DOMAIN-SUFFIX,ip.fm                       # [新增] ip.fm 极简大字查IP
+DOMAIN,ip.awk.sh                          # [新增] AWK IP 极简终端/网页查IP
+DOMAIN,checkip.amazonaws.com              # [新增] AWS 官方极简公共IP回显
+DOMAIN,checkip.dyndns.org                 # [新增] DynDNS 官方经典极简IP
 
 # =========================================================
 # 3. 網頁 DNS 洩漏與 WebRTC 檢測
 # =========================================================
-DOMAIN-SUFFIX,ipleak.net
-DOMAIN-SUFFIX,dnsleaktest.com
-DOMAIN-SUFFIX,dnscheck.tools
+DOMAIN-SUFFIX,ipleak.net                  # [原有] IPLeak.net 权威全套泄露检测
+DOMAIN-SUFFIX,dnsleaktest.com             # [原有] DNSLeakTest 经典DNS泄露测试
+DOMAIN-SUFFIX,dnscheck.tools              # [原有] DNSCheck.tools 现代化DNS与EDNS检测
+DOMAIN-SUFFIX,ipleak.com                  # [新增] IPLeak 备用域
+DOMAIN-SUFFIX,ipleak.org                  # [新增] IPLeak 备用域
+DOMAIN-SUFFIX,dnsleak.com                 # [新增] DNSLeak 专用DNS泄露检测
+DOMAIN-SUFFIX,bash.ws                     # [新增] bash.ws 知名终端与网页DNS泄露深度体检
+DOMAIN-SUFFIX,browserleaks.org            # [新增] BrowserLeaks 备用域
+DOMAIN-SUFFIX,browserleaks.io             # [新增] BrowserLeaks 新一代开源泄漏检测套件
 
 # =========================================================
 # 4. 主流網頁在線測速與 IPv6 檢測
 # 說明: ooklaserver.net 是 Speedtest 網頁能跑出帶寬的底層核心集群
 # =========================================================
-DOMAIN,speed.cloudflare.com
-DOMAIN-SUFFIX,speedtest.net
-DOMAIN-SUFFIX,ooklaserver.net
-DOMAIN-SUFFIX,ookla.com
-DOMAIN-SUFFIX,wifiman.com
-DOMAIN-SUFFIX,nperf.com
-DOMAIN-SUFFIX,test-ipv6.com
-DOMAIN-SUFFIX,ipv6-test.com
+DOMAIN,speed.cloudflare.com               # [原有] Cloudflare 官方多线程测速
+DOMAIN-SUFFIX,speedtest.net               # [原有] Speedtest (Ookla) 测速主站
+DOMAIN-SUFFIX,ooklaserver.net             # [原有] Ookla 测速核心数据节点集群
+DOMAIN-SUFFIX,ookla.com                   # [原有] Ookla 官方主域
+DOMAIN-SUFFIX,wifiman.com                 # [原有] WiFiman (Ubiquiti) 精准测速
+DOMAIN-SUFFIX,nperf.com                   # [原有] nPerf 国际专业测速
+DOMAIN-SUFFIX,test-ipv6.com               # [原有] Test-IPv6 全球权威IPv6评分
+DOMAIN-SUFFIX,ipv6-test.com               # [原有] IPv6-Test 权威双栈连通性测试
+DOMAIN-SUFFIX,test-ipv6.cn                # [新增] Test-IPv6 中国镜像站
+DOMAIN-SUFFIX,testipv6.cn                 # [新增] Test-IPv6 镜像备用
+DOMAIN-SUFFIX,ipv6ready.org               # [新增] IPv6 Ready 国际联盟官方测试
+DOMAIN-SUFFIX,ipv6forum.com               # [新增] IPv6 Forum 全球论坛测试
+DOMAIN-SUFFIX,tunnelbroker.net            # [新增] HE Hurricane Electric 隧道及IPv6测试
+DOMAIN,ipv6.he.net                        # [新增] HE 专用IPv6连通测试端
+DOMAIN-SUFFIX,librespeed.org              # [新增] LibreSpeed 全球主流开源测速网络
+DOMAIN-SUFFIX,openspeedtest.com           # [新增] OpenSpeedTest HTML5独立网页测速
+DOMAIN-SUFFIX,speedcheck.org              # [新增] SpeedCheck 全球宽带与延迟测速
+DOMAIN-SUFFIX,speedsmart.net              # [新增] SpeedSmart HTML5网络测速
+DOMAIN-SUFFIX,speedof.me                  # [新增] SpeedOf.Me 经典轻量网页测速
+# --- [以下为 Google 策略组防抢占隔离项 (置于底部)] ---
+#DOMAIN,ipv6.google.com                    # [新增] [Google隔离] Google 原生IPv6连通测试
+#DOMAIN,ipv6test.google.com                # [新增] [Google隔离] Google 官方IPv6专用诊断接口
+#DOMAIN-SUFFIX,measurementlab.net          # [新增] [Google隔离] M-Lab 测速底座（Google搜索内置测速后台）
+#DOMAIN,speedtest.googlefiber.net          # [新增] [Google隔离] Google Fiber 谷歌千兆光纤官方测速节点
 
 # =========================================================
 # 5. 【國內實用測試網頁】
-# 說明: PConline、IPIP.NET 及中科大保持註釋禁用；其餘常用的國內查 IP 與測速放開
 # =========================================================
-#DOMAIN-SUFFIX,whois.pconline.com.cn
-#DOMAIN-SUFFIX,ipip.net
-#DOMAIN-SUFFIX,ustc.edu.cn
-#DOMAIN,test.ustc.edu.cn
-#DOMAIN,speedtest.ustc.edu.cn
-#DOMAIN-SUFFIX,speedtest.cn
-DOMAIN-SUFFIX,ip138.com
-DOMAIN-SUFFIX,ip111.cn
-DOMAIN-SUFFIX,ip.cn
-DOMAIN-SUFFIX,ipw.cn
-DOMAIN-SUFFIX,cip.cc
-DOMAIN-SUFFIX,itdog.cn
-DOMAIN-SUFFIX,cesu.net
+DOMAIN-SUFFIX,ip138.com                   # [原有] IP138 经典国内查IP
+DOMAIN-SUFFIX,ip111.cn                    # [原有] IP111 快速查看内外网IP
+DOMAIN-SUFFIX,ip.cn                       # [原有] IP.cn 经典老牌国内查IP
+DOMAIN-SUFFIX,ipw.cn                      # [原有] IPW 专业的IPv6双栈测试
+DOMAIN-SUFFIX,cip.cc                      # [原有] cip.cc 命令行/网页国内IP信息
+DOMAIN-SUFFIX,itdog.cn                    # [原有] ITDOG 国内多节点Ping与路由测试
+DOMAIN-SUFFIX,cesu.net                    # [原有] 测速网 常用网页测速
+DOMAIN-SUFFIX,ipchaxun.com                # [新增] IP查询网
+DOMAIN-SUFFIX,ipshu.com                   # [新增] IP舒 归属地与IP类型查询
+DOMAIN-SUFFIX,chaip.net                   # [新增] 查IP网
+DOMAIN-SUFFIX,boce.com                    # [新增] BOCE 拨测（国内主流网络多节点体检）
+DOMAIN-SUFFIX,17ce.com                    # [新增] 17CE（国内主流路由与速度体检）
+DOMAIN,ip.chinaz.com                      # [新增] 站长之家 IP查询
+DOMAIN,ip.tool.chinaz.com                 # [新增] 站长之家 工具IP
+DOMAIN,speed.chinaz.com                   # [新增] 站长之家 网站测速
+DOMAIN-SUFFIX,ping.pe                     # [新增] Ping.pe 全球/国内多节点Ping与丢包测试
+DOMAIN-SUFFIX,ping.cat                    # [新增] Ping.cat 多节点Ping备用
+DOMAIN-SUFFIX,nexttrace.org               # [新增] NextTrace 路由可视化追踪
+DOMAIN-SUFFIX,nxtrace.org                 # [新增] NextTrace 官方API与测试
+# --- [以下为国内测速与教育网免流保护隔离项 (置于底部)] ---
+#DOMAIN-SUFFIX,whois.pconline.com.cn      # [原有保持注释] 太平洋电脑网 IP查询
+#DOMAIN-SUFFIX,ipip.net                  # [原有保持注释] IPIP.NET 高精度IP
+#DOMAIN-SUFFIX,ustc.edu.cn                # [原有保持注释] 中科大主域（保护校园网免流）
+#DOMAIN,test.ustc.edu.cn                  # [原有保持注释] 中科大 IPv6 测试
+#DOMAIN,speedtest.ustc.edu.cn             # [原有保持注释] 中科大测速
+#DOMAIN-SUFFIX,speedtest.cn               # [原有保持注释] 测速网 SpeedTest.cn
 
 # =========================================================
 # 6. 【安全隔離 - 最底端】Netflix / Fast.com 網頁測速
-# 說明: 僅保留 Fast.com 測速接口，預設註釋隔離，絕不截胡您的 Netflix 觀影解鎖組
 # =========================================================
-#DOMAIN-SUFFIX,fast.com
-#DOMAIN,ichnaea-web.netflix.com
+# --- [以下为 Netflix 原生解锁保护隔离项 (置于底部)] ---
+#DOMAIN-SUFFIX,fast.com                   # [原有保持注释] Netflix Fast.com 测速（防打爆节点与被封解锁）
+#DOMAIN,ichnaea-web.netflix.com           # [原有保持注释] Netflix 测速真实视频流 CDN 接口
