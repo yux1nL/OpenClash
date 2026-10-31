@@ -25,6 +25,12 @@ DOMAIN-SUFFIX,ipx.ac
 DOMAIN-SUFFIX,deviceinfo.me
 DOMAIN-SUFFIX,amiunique.org
 DOMAIN-SUFFIX,iplark.com
+# --- IPLark 多路探针与动态测速/WebRTC集群 ---
+DOMAIN-SUFFIX,aapq.net
+DOMAIN-SUFFIX,687511.xyz
+DOMAIN-SUFFIX,coc.li
+DOMAIN-SUFFIX,contabo.net
+DOMAIN-SUFFIX,cdnetworks.net
 DOMAIN-SUFFIX,ippure.com
 DOMAIN-SUFFIX,ipsuper.com
 DOMAIN-SUFFIX,check.place
