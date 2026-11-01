@@ -163,8 +163,8 @@ DOMAIN-SUFFIX,ping.cat
 DOMAIN-SUFFIX,nexttrace.org
 DOMAIN-SUFFIX,nxtrace.org
 # --- 国内测速/教育网免流保护项 (保持注释) ---
-DOMAIN-SUFFIX,whois.pconline.com.cn
-DOMAIN-SUFFIX,ipip.net
+#DOMAIN-SUFFIX,whois.pconline.com.cn
+#DOMAIN-SUFFIX,ipip.net
 #DOMAIN-SUFFIX,ustc.edu.cn
 #DOMAIN,test.ustc.edu.cn
 #DOMAIN,speedtest.ustc.edu.cn
