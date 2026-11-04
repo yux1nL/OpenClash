@@ -165,3 +165,6 @@ DOMAIN-SUFFIX,brightdata.com
 DOMAIN-SUFFIX,webshare.io
 DOMAIN-SUFFIX,proxy-seller.com
 DOMAIN-SUFFIX,ip2world.com
+# ==================== 6. Apple APNs 消息推送 ====================
+DOMAIN-SUFFIX,push.apple.com
+DOMAIN-SUFFIX,push-apple.com.akadns.net
