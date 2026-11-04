@@ -5,7 +5,6 @@
 # =========================================================
 
 # --- 1. Apple Intelligence & 云端私密算力集群 (PCC) ---
-# 苹果云端 AI 算力服务 (复杂任务、写作工具、图片生成等云端大模型运算)
 DOMAIN-SUFFIX,pcc.apple.com
 DOMAIN-SUFFIX,intelligence.apple.com
 DOMAIN-SUFFIX,math.apple.com
@@ -13,19 +12,34 @@ DOMAIN-SUFFIX,fbs.apple.com
 
 # --- 2. 苹果 AI 资产、地理围栏资格校验、端侧模型权重下载与反馈 ---
 DOMAIN-SUFFIX,gspe1-ssl.ls.apple.com
+DOMAIN-SUFFIX,ls.apple.com
+DOMAIN,ls-apple.com.akadns.net
+DOMAIN-SUFFIX,gs-loc.apple.com
+DOMAIN-SUFFIX,gs-loc-cn.apple.com
 DOMAIN-SUFFIX,model-distribution.apple.com
 DOMAIN-SUFFIX,gdmf.apple.com
+DOMAIN-SUFFIX,mesu.apple.com
+DOMAIN,mesu-cdn.apple.com.akadns.net
+DOMAIN,mesu-china.apple.com.akadns.net
+DOMAIN-SUFFIX,configuration.apple.com
+DOMAIN,configuration.apple.com.akadns.net
+DOMAIN-SUFFIX,experiments.apple.com
 DOMAIN-SUFFIX,feedback-ws.apple.com
 
-# --- 3. Siri 核心与 ChatGPT 深度集成 ---
+# --- 3. Siri 核心与 ChatGPT 深度集成 (含 apple-cn 中混入的 Siri 组件) ---
 DOMAIN-SUFFIX,siri.apple.com
 DOMAIN-SUFFIX,siri.cp.apple.com
 DOMAIN-SUFFIX,guzzoni.apple.com
+DOMAIN,guzzoni-apple-com.v.aaplimg.com
 DOMAIN-SUFFIX,smoot.apple.com
+DOMAIN-SUFFIX,swallow.apple.com
+DOMAIN,swallow-apple-com.v.aaplimg.com
+DOMAIN-SUFFIX,sequoia.apple.com
+DOMAIN-SUFFIX,sylvan.apple.com
+DOMAIN-SUFFIX,pancake.apple.com
 DOMAIN-SUFFIX,apple.chatgpt.com
 
 # --- 4. Apple Private Cloud 隐私网关与 ODoH / OHTTP 中继节点 ---
-# Apple AI 与私密计算必定经过的云端身份剥离中继
 DOMAIN,gateway.icloud.com
 DOMAIN-SUFFIX,mask.icloud.com
 DOMAIN-SUFFIX,mask-h2.icloud.com
@@ -34,5 +48,3 @@ DOMAIN-SUFFIX,apple-relay.cloudflare.com
 DOMAIN-SUFFIX,apple-relay.fastly-edge.com
 DOMAIN-SUFFIX,ohttp-relay.fastly-edge.com
 DOMAIN-SUFFIX,cp4.cloudflare.com
-
-DOMAIN-SUFFIX,push.apple.com
