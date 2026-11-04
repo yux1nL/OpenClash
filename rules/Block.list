@@ -1,4 +1,100 @@
-DOMAIN-SUFFIX,adobe.com
-DOMAIN-SUFFIX,adobedtm.com
-DOMAIN-SUFFIX,adobe.io
-DOMAIN-SUFFIX,omtrdc.net
+# =========================================================
+# Custom Block & Anti-PCDN Payload (rules/Block.list)
+# 覆盖：百度网盘、抖音/字节、快手、B站、迅雷、爱优腾、淘宝直播、网易云等
+# 原则：只杀 P2P/PCDN/HCDN/MCDN 边缘吸血调度，100% 保留官方主 CDN (零黑屏)
+# =========================================================
+
+# --- 1. 全局 PCDN / HCDN / MCDN / P2P 强特征关键字通杀 ---
+DOMAIN-KEYWORD,pcdn
+DOMAIN-KEYWORD,mcdn
+DOMAIN-KEYWORD,hcdn
+DOMAIN-KEYWORD,p2pchunk
+DOMAIN-KEYWORD,p2plive
+DOMAIN-KEYWORD,p2pvod
+DOMAIN-KEYWORD,p2p-ali
+DOMAIN-KEYWORD,p2p-hw
+DOMAIN-KEYWORD,dyp2p
+DOMAIN-KEYWORD,yfp2p
+DOMAIN-KEYWORD,trackercdn
+
+# --- 2. 抖音 / 西瓜视频 / 字节跳动系 PCDN 与直播 P2P ---
+DOMAIN-SUFFIX,bytefcdn.com
+DOMAIN-SUFFIX,bytep2p.com
+DOMAIN-SUFFIX,bdp2p.com
+DOMAIN-SUFFIX,p2p.toutiao.com
+DOMAIN-SUFFIX,p2p.snssdk.com
+DOMAIN,pull-hs-f5-hot.flive.douyincdn.com
+DOMAIN,pull-rtmp-l11.ixigua.com
+DOMAIN,push-rtmp-l1.ixigua.com
+
+# --- 3. 百度网盘 / 百度系 PCDN 专属调度 ---
+DOMAIN-SUFFIX,szbdyd.com
+DOMAIN-SUFFIX,p2p.baidupan.com
+DOMAIN-SUFFIX,hcdn.baidupan.com
+DOMAIN-SUFFIX,jomodns.cn
+DOMAIN,httpsdns.baidu.com
+DOMAIN,httpdns.baidu.com
+DOMAIN,httpdns.baidubce.com
+DOMAIN,httpdns.bcelive.com
+
+# --- 4. 迅雷 / 网心云 / 玩客云 / PPIO 等第三方公共 PCDN 供应商 ---
+# (抖音、快手、淘宝、拼多多、小红书的外包 PCDN 节点均汇聚于此)
+DOMAIN-SUFFIX,onethingpcs.com
+DOMAIN-SUFFIX,xycdn.com
+DOMAIN-SUFFIX,kuiniuca.com
+DOMAIN-SUFFIX,ppio.cloud
+DOMAIN-SUFFIX,pplive.cn
+DOMAIN-SUFFIX,pkoplink.com
+DOMAIN-SUFFIX,saxysec.com
+DOMAIN-SUFFIX,uhabo.com
+DOMAIN-SUFFIX,bsccdn.net
+DOMAIN-SUFFIX,gjfzpt.cn
+DOMAIN-SUFFIX,ietheivaicai.com
+DOMAIN-SUFFIX,nexusedgeio.com
+DOMAIN-SUFFIX,edge.mountaintoys.cn
+DOMAIN-SUFFIX,163jiasu.com
+DOMAIN-SUFFIX,yunfancdn.com
+DOMAIN-SUFFIX,cdntip.com
+DOMAIN-SUFFIX,sao.com
+DOMAIN-SUFFIX,hub5btmain.sandai.net
+DOMAIN-SUFFIX,hub5emu.sandai.net
+DOMAIN-SUFFIX,hub5idx.sandai.net
+DOMAIN-SUFFIX,hubciddata.sandai.net
+
+# --- 5. B站 (Bilibili) PCDN / MCDN 节点 ---
+DOMAIN-SUFFIX,mcdn.bilivideo.cn
+DOMAIN-SUFFIX,mcdn.bilivideo.com
+DOMAIN-SUFFIX,mcdn.bilivideo.net
+DOMAIN-SUFFIX,pcdn.biliapi.net
+DOMAIN,httpdns.bilivideo.com
+
+# --- 6. 快手 / 淘宝 / 网易云音乐 / 喜马拉雅 / 酷狗 P2P ---
+DOMAIN-SUFFIX,pcdn.yximgs.com
+DOMAIN-SUFFIX,p2p.kuaishou.com
+DOMAIN-SUFFIX,p2p.alicdn.com
+DOMAIN-SUFFIX,p2p.tbcdn.cn
+DOMAIN-SUFFIX,pcdn.xmcdn.com
+DOMAIN-SUFFIX,p2p.music.163.com
+DOMAIN-SUFFIX,p2p.kugou.com
+
+# --- 7. 爱奇艺 / 优酷 / 腾讯视频 / 芒果TV / 斗鱼 / 虎牙 P2P ---
+DOMAIN-SUFFIX,hcdn.qiyi.com
+DOMAIN-SUFFIX,pdata.video.qiyi.com
+DOMAIN-SUFFIX,cachecdn.v.iqiyi.com
+DOMAIN-SUFFIX,meta-cdn.video.iq.com
+DOMAIN-SUFFIX,tpa-hcdn.iqiyi.com
+DOMAIN-SUFFIX,data6.video.iqiyi.com
+DOMAIN-SUFFIX,hcdn.video.qq.com
+DOMAIN-SUFFIX,pcdn.video.qq.com
+DOMAIN-SUFFIX,p2p.qq.com
+DOMAIN-SUFFIX,p2ptun.qq.com
+DOMAIN-SUFFIX,p2pupdate.gamedl.qq.com
+DOMAIN-SUFFIX,p2pupgrade.gamedl.qq.com
+DOMAIN-SUFFIX,iwan-s.video.qq.com
+DOMAIN-SUFFIX,atm.youku.com
+DOMAIN-SUFFIX,p2p.youku.com
+DOMAIN-SUFFIX,p2p.hunantv.com
+DOMAIN-SUFFIX,stun.hitv.com
+DOMAIN-SUFFIX,p2p.huya.com
+DOMAIN-SUFFIX,stun.douyucdn.cn
+DOMAIN-SUFFIX,stun1.douyucdn.cn
