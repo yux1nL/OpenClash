@@ -34,3 +34,5 @@ DOMAIN-SUFFIX,apple-relay.cloudflare.com
 DOMAIN-SUFFIX,apple-relay.fastly-edge.com
 DOMAIN-SUFFIX,ohttp-relay.fastly-edge.com
 DOMAIN-SUFFIX,cp4.cloudflare.com
+
+DOMAIN-SUFFIX,push.apple.com
