@@ -30,6 +30,9 @@ DOMAIN-SUFFIX,bwh81.net
 DOMAIN-SUFFIX,dmit.io
 DOMAIN-SUFFIX,dmit.com
 
+# --- lightlayer ---
+DOMAIN-SUFFIX,lightlayer.net
+
 # --- Claw Cloud (新加坡/日本大带宽) ---
 DOMAIN-SUFFIX,claw.cloud
 
