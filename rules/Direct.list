@@ -130,7 +130,7 @@ DOMAIN-SUFFIX,standardchartered.com.hk
 # 建行亚洲 (CCB Asia)
 DOMAIN-SUFFIX,ccbasia.com
 DOMAIN-SUFFIX,ccb.com.hk
-DOMAIN,asia.ccb.com
+DOMAIN-SUFFIX,asia.ccb.com
 # 工银亚洲 (ICBC Asia)
 DOMAIN-SUFFIX,icbcasia.com
 # 招商永隆银行 (CMB Wing Lung)
