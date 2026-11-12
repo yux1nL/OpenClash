@@ -121,6 +121,8 @@ IP-CIDR,202.82.164.0/22,no-resolve
 # 汇丰香港 (HSBC HK)
 DOMAIN-SUFFIX,hsbc.com.hk
 DOMAIN-SUFFIX,hsbc.com
+DOMAIN-SUFFIX,hsbcnet.com
+DOMAIN-SUFFIX,hsbcprivatebank.com
 # 恒生银行 (Hang Seng Bank)
 DOMAIN-SUFFIX,hangseng.com
 DOMAIN-SUFFIX,hangseng.com.hk
@@ -131,6 +133,7 @@ DOMAIN-SUFFIX,standardchartered.com.hk
 DOMAIN-SUFFIX,ccbasia.com
 DOMAIN-SUFFIX,ccb.com.hk
 DOMAIN-SUFFIX,asia.ccb.com
+DOMAIN-SUFFIX,hk.ccb.com
 # 工银亚洲 (ICBC Asia)
 DOMAIN-SUFFIX,icbcasia.com
 # 招商永隆银行 (CMB Wing Lung)
@@ -158,6 +161,9 @@ DOMAIN-SUFFIX,shacombank.com.hk
 # 众安银行 (ZA Bank)
 DOMAIN-SUFFIX,zabank.com
 DOMAIN-SUFFIX,za.group
+DOMAIN-SUFFIX,zaticdn.com
+DOMAIN-SUFFIX,zajourney.com
+DOMAIN-SUFFIX,zaintl.com
 # Mox Bank (渣打旗下)
 DOMAIN-SUFFIX,mox.com
 # 理慧银行 (Livi Bank)
