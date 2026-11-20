@@ -19,7 +19,6 @@ DOMAIN-SUFFIX,right.com.cn
 # --- 国内测速网直连 ---
 DOMAIN-SUFFIX,speedtest.cn
 # --- 网易云音乐及网易全业务直连 ---
-DOMAIN-SUFFIX,music.163.com
 DOMAIN-SUFFIX,163.com
 DOMAIN-SUFFIX,126.net
 DOMAIN-SUFFIX,127.net
@@ -62,13 +61,15 @@ IP-CIDR6,240e:4c:4008::1/128,no-resolve
 IP-CIDR6,2409:8088::a/128,no-resolve
 
 # =========================================================
-# 香港 (HK) 金融清算底层基础设施 (转数快 FPS / HKICL 核心基建)
+# 金融清算底层基础设施与核心支付 (转数快 FPS / 银联 / 支付宝)
 # =========================================================
 DOMAIN-SUFFIX,hkicl.com.hk
 DOMAIN-SUFFIX,fps.hk
 DOMAIN-SUFFIX,chinapay.com
 DOMAIN-SUFFIX,unionpay.com
 DOMAIN-SUFFIX,95516.com
+DOMAIN-SUFFIX,alipay.com
+DOMAIN-SUFFIX,mybank.cn
 
 # =========================================================
 # 香港主要移动运营商官方主站、App、充值与管理门户
@@ -89,8 +90,8 @@ DOMAIN-SUFFIX,supreme.vip
 # 数码通 SmarTone
 DOMAIN-SUFFIX,smartone.com
 DOMAIN-SUFFIX,smartoneplus.com
-# 中国移动香港 (CMHK) / 润迅通信
-DOMAIN-SUFFIX,hk.chinamobile.com
+# 中国移动 / 中国移动香港 (CMHK) / 润迅通信
+DOMAIN-SUFFIX,chinamobile.com
 DOMAIN-SUFFIX,cmhk.com
 DOMAIN-SUFFIX,cugstore.com
 
@@ -116,10 +117,11 @@ IP-CIDR,203.78.3.0/24,no-resolve
 IP-CIDR,202.82.164.0/22,no-resolve
 
 # =========================================================
-# 香港主要银行与金融机构 (直连放行，防异地登录/反洗钱风控)
+# 香港与内地主要银行及金融机构 (主域后缀直连放行，防误杀与异地风控)
 # =========================================================
-# 汇丰香港 (HSBC HK)
+# 汇丰银行 (HSBC HK / CN / Global)
 DOMAIN-SUFFIX,hsbc.com.hk
+DOMAIN-SUFFIX,hsbc.com.cn
 DOMAIN-SUFFIX,hsbc.com
 DOMAIN-SUFFIX,hsbcnet.com
 DOMAIN-SUFFIX,hsbcprivatebank.com
@@ -129,24 +131,34 @@ DOMAIN-SUFFIX,hangseng.com.hk
 # 渣打香港 (Standard Chartered HK)
 DOMAIN-SUFFIX,sc.com
 DOMAIN-SUFFIX,standardchartered.com.hk
-# 建行亚洲 (CCB Asia)
+# 建设银行 / 建行亚洲 (CCB & CCB Asia，主域全覆盖含 adv/olb/touch/asia/hk)
+DOMAIN-SUFFIX,ccb.com
+DOMAIN-SUFFIX,ccb.cn
 DOMAIN-SUFFIX,ccbasia.com
 DOMAIN-SUFFIX,ccb.com.hk
-DOMAIN-SUFFIX,asia.ccb.com
-DOMAIN-SUFFIX,hk.ccb.com
-# 工银亚洲 (ICBC Asia)
+# 工商银行 / 工银亚洲 (ICBC & ICBC Asia)
+DOMAIN-SUFFIX,icbc.com.cn
+DOMAIN-SUFFIX,icbc.com
+DOMAIN-SUFFIX,icbc.com.hk
 DOMAIN-SUFFIX,icbcasia.com
-# 招商永隆银行 (CMB Wing Lung)
+# 招商银行 / 招商永隆银行 (CMB & CMB Wing Lung)
+DOMAIN-SUFFIX,cmbchina.com
 DOMAIN-SUFFIX,cmbwinglung.com
 DOMAIN-SUFFIX,winglungbank.com
-# 中信银行国际 (CNCBI)
+# 浦发银行 (SPDB)
+DOMAIN-SUFFIX,spdb.com.cn
+DOMAIN-SUFFIX,spdbccc.com.cn
+# 中信银行 / 中信银行国际 (CITIC & CNCBI)
+DOMAIN-SUFFIX,citicbank.com
 DOMAIN-SUFFIX,cncbinternational.com
 # 东亚银行 (BEA)
 DOMAIN-SUFFIX,hkbea.com
 DOMAIN-SUFFIX,hkbea.com.hk
-# 花旗香港 (Citibank HK)
+# 花旗银行 / 花旗香港 (Citibank)
 DOMAIN-SUFFIX,citibank.com.hk
 DOMAIN-SUFFIX,citi.com.hk
+DOMAIN-SUFFIX,citibank.com
+DOMAIN-SUFFIX,citi.com
 # 大新银行 (Dah Sing Bank)
 DOMAIN-SUFFIX,dahsing.com
 # 创兴银行 (Chong Hing Bank)
